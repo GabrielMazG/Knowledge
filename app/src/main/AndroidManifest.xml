@@ -23,7 +23,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".navigationComponent.MainActivityNavigationComponent" />
+        <activity android:name=".navigationComponent.NavigationComponentMainActivity" />
+        <activity android:name=".flow.FlowMainActivity" />
     </application>
 
 </manifest>

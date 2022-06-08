@@ -4,7 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.knowledge.databinding.ActivityMainBinding
-import com.example.knowledge.navigationComponent.MainActivityNavigationComponent
+import com.example.knowledge.flow.FlowMainActivity
+import com.example.knowledge.navigationComponent.NavigationComponentMainActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,7 +18,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         binding.navigationComponents.setOnClickListener {
-            startActivity(Intent(this, MainActivityNavigationComponent::class.java))
+            startActivity(Intent(this, NavigationComponentMainActivity::class.java))
+        }
+
+        binding.flows.setOnClickListener {
+            startActivity(Intent(this, FlowMainActivity::class.java))
         }
     }
 }
