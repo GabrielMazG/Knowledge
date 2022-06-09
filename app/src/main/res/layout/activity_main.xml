@@ -25,4 +25,13 @@
         app:layout_constraintStart_toStartOf="@id/navigationComponents"
         app:layout_constraintTop_toBottomOf="@id/navigationComponents" />
 
+    <Button
+        android:id="@+id/graphQL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GraphQL"
+        app:layout_constraintEnd_toEndOf="@id/navigationComponents"
+        app:layout_constraintStart_toStartOf="@id/navigationComponents"
+        app:layout_constraintTop_toBottomOf="@id/flows" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

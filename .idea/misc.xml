@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.12226707029936092" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.152" />
         <entry key="app/src/main/res/drawable/my_nav.xml" value="0.239" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2916666666666667" />
         <entry key="app/src/main/res/layout/activity_main_flow.xml" value="0.35260416666666666" />
+        <entry key="app/src/main/res/layout/activity_main_graphql.xml" value="0.17916666666666667" />
         <entry key="app/src/main/res/layout/activity_main_navigation_component.xml" value="0.2916666666666667" />
+        <entry key="app/src/main/res/layout/fragment_launch_details_graphql.xml" value="0.17916666666666667" />
+        <entry key="app/src/main/res/layout/fragment_launch_list_graphql.xml" value="0.17916666666666667" />
+        <entry key="app/src/main/res/layout/fragment_login_graphql.xml" value="0.17916666666666667" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.2916666666666667" />
+        <entry key="app/src/main/res/layout/launch_item_graphql.xml" value="0.17916666666666667" />
       </map>
     </option>
   </component>
