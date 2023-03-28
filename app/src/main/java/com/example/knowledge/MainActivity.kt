@@ -18,16 +18,23 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        binding.navigationComponents.setOnClickListener {
-            startActivity(Intent(this, NavigationComponentMainActivity::class.java))
-        }
+        with(binding) {
+            navigationComponents.setOnClickListener {
+                startActivity(
+                    Intent(
+                        this@MainActivity,
+                        NavigationComponentMainActivity::class.java
+                    )
+                )
+            }
 
-        binding.flows.setOnClickListener {
-            startActivity(Intent(this, FlowMainActivity::class.java))
-        }
+            flows.setOnClickListener {
+                startActivity(Intent(this@MainActivity, FlowMainActivity::class.java))
+            }
 
-        binding.graphQL.setOnClickListener {
-            startActivity(Intent(this, GraphQLMainActivity::class.java))
+            graphQL.setOnClickListener {
+                startActivity(Intent(this@MainActivity, GraphQLMainActivity::class.java))
+            }
         }
     }
 }
