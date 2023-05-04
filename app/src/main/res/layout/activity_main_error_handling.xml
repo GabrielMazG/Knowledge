@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".errorHandling.ErrorHandlingMainActivity">
+
+    <Button
+        android:id="@+id/tryCatchWithLaunch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/error_handling_try_catch_with_launch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/tryCatchWithNestedLaunch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/error_handling_try_catch_with_nested_launch"
+        app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
+        app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
+        app:layout_constraintTop_toBottomOf="@id/tryCatchWithLaunch" />
+
+    <Button
+        android:id="@+id/fetchDataWithExHandler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/error_handling_fetch_data_with_ex_handler"
+        app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
+        app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
+        app:layout_constraintTop_toBottomOf="@id/tryCatchWithNestedLaunch" />
+
+    <Button
+        android:id="@+id/asyncAwaitWithExHandler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/error_handling_async_await_with_ex_handler"
+        app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
+        app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
+        app:layout_constraintTop_toBottomOf="@id/fetchDataWithExHandler" />
+
+    <Button
+        android:id="@+id/tryCatchWithAsyncAwait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/error_handling_try_catch_with_async_await"
+        app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
+        app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
+        app:layout_constraintTop_toBottomOf="@id/asyncAwaitWithExHandler" />
+
+    <Button
+        android:id="@+id/exHandlingWithCoroutineScope"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/error_handling_ex_handling_with_coroutine_scope"
+        app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
+        app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
+        app:layout_constraintTop_toBottomOf="@id/tryCatchWithAsyncAwait" />
+
+    <Button
+        android:id="@+id/launchSupervisorScopeWithExHandler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/error_handling_launch_supervisor_scope_with_ex_handler"
+        app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
+        app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
+        app:layout_constraintTop_toBottomOf="@id/exHandlingWithCoroutineScope" />
+
+    <Button
+        android:id="@+id/asyncSupervisorScopeWithTryCatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/error_handling_async_supervisor_scope_with_try_catch"
+        app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
+        app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
+        app:layout_constraintTop_toBottomOf="@id/launchSupervisorScopeWithExHandler" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/textContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/asyncAwaitWithExHandler"
+        app:layout_constraintStart_toStartOf="@id/asyncAwaitWithExHandler"
+        app:layout_constraintTop_toBottomOf="@id/asyncSupervisorScopeWithTryCatch">
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

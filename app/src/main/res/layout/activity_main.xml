@@ -11,7 +11,7 @@
         android:id="@+id/navigationComponents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Navigation Components"
+        android:text="@string/navigation_components_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,7 +20,7 @@
         android:id="@+id/flows"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Flows"
+        android:text="@string/flows_title"
         app:layout_constraintEnd_toEndOf="@id/navigationComponents"
         app:layout_constraintStart_toStartOf="@id/navigationComponents"
         app:layout_constraintTop_toBottomOf="@id/navigationComponents" />
@@ -29,9 +29,18 @@
         android:id="@+id/graphQL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GraphQL"
+        android:text="@string/graphql_title"
         app:layout_constraintEnd_toEndOf="@id/navigationComponents"
         app:layout_constraintStart_toStartOf="@id/navigationComponents"
         app:layout_constraintTop_toBottomOf="@id/flows" />
+
+    <Button
+        android:id="@+id/errorHandling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/error_handling_title"
+        app:layout_constraintEnd_toEndOf="@id/navigationComponents"
+        app:layout_constraintStart_toStartOf="@id/navigationComponents"
+        app:layout_constraintTop_toBottomOf="@id/graphQL" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

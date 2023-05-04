@@ -28,6 +28,7 @@
         <activity android:name=".navigationComponent.NavigationComponentMainActivity" />
         <activity android:name=".flow.FlowMainActivity" />
         <activity android:name=".graphQL.GraphQLMainActivity" />
+        <activity android:name=".errorHandling.ErrorHandlingMainActivity" />
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.knowledge.databinding.ActivityMainBinding
+import com.example.knowledge.errorHandling.ErrorHandlingMainActivity
 import com.example.knowledge.flow.FlowMainActivity
 import com.example.knowledge.graphQL.GraphQLMainActivity
 import com.example.knowledge.navigationComponent.NavigationComponentMainActivity
@@ -34,6 +35,10 @@ class MainActivity : AppCompatActivity() {
 
             graphQL.setOnClickListener {
                 startActivity(Intent(this@MainActivity, GraphQLMainActivity::class.java))
+            }
+
+            errorHandling.setOnClickListener {
+                startActivity(Intent(this@MainActivity, ErrorHandlingMainActivity::class.java))
             }
         }
     }
