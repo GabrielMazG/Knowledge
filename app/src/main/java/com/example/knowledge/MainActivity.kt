@@ -3,11 +3,11 @@ package com.example.knowledge
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.composemodule.ProfileActivity
-import com.example.knowledge.databinding.ActivityMainBinding
+import com.example.composemodule.ComposeActivity
 import com.example.errorhandlermodule.ErrorHandlingMainActivity
 import com.example.flowmodule.FlowMainActivity
 import com.example.graphqlmodule.GraphQLMainActivity
+import com.example.knowledge.databinding.ActivityMainBinding
 import com.example.navigationcomponentmodule.NavigationComponentMainActivity
 
 class MainActivity : AppCompatActivity() {
@@ -25,25 +25,25 @@ class MainActivity : AppCompatActivity() {
                 startActivity(
                     Intent(
                         this@MainActivity,
-                        com.example.navigationcomponentmodule.NavigationComponentMainActivity::class.java
+                        NavigationComponentMainActivity::class.java
                     )
                 )
             }
 
             flows.setOnClickListener {
-                startActivity(Intent(this@MainActivity, com.example.flowmodule.FlowMainActivity::class.java))
+                startActivity(Intent(this@MainActivity, FlowMainActivity::class.java))
             }
 
             graphQL.setOnClickListener {
-                startActivity(Intent(this@MainActivity, com.example.graphqlmodule.GraphQLMainActivity::class.java))
+                startActivity(Intent(this@MainActivity, GraphQLMainActivity::class.java))
             }
 
             errorHandling.setOnClickListener {
-                startActivity(Intent(this@MainActivity, com.example.errorhandlermodule.ErrorHandlingMainActivity::class.java))
+                startActivity(Intent(this@MainActivity, ErrorHandlingMainActivity::class.java))
             }
 
             compose.setOnClickListener {
-                startActivity(Intent(this@MainActivity, ProfileActivity::class.java))
+                startActivity(Intent(this@MainActivity, ComposeActivity::class.java))
             }
         }
     }
