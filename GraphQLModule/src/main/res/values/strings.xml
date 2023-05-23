@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="oh_no" tools:ignore="ExtraTranslation">Oh no… Something went wrong.</string>
+    <string name="book_now" tools:ignore="ExtraTranslation">Book now</string>
+    <string name="cancel" tools:ignore="ExtraTranslation">Cancel</string>
+    <string name="login" tools:ignore="ExtraTranslation">Log in</string>
+    <string name="email" tools:ignore="ExtraTranslation">email</string>
+    <string name="submit" tools:ignore="ExtraTranslation">Submit</string>
+    <string name="invalid_email" tools:ignore="ExtraTranslation">Invalid email</string>
+    <string name="tripBooked" tools:ignore="ExtraTranslation">%1$d trip(s) has(have) been booked 🚀🚀</string>
+    <string name="tripCancelled" tools:ignore="ExtraTranslation">A trip has been cancelled</string>
+    <string name="subscriptionError" tools:ignore="ExtraTranslation">Oops, something wrong happened</string>
+</resources>

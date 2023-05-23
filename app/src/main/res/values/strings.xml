@@ -1,40 +1,4 @@
 <resources>
     <string name="app_name">Knowledge</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="oh_no">Oh no… Something went wrong.</string>
-    <string name="book_now">Book now</string>
-    <string name="cancel">Cancel</string>
-    <string name="login">Log in</string>
-    <string name="email">email</string>
-    <string name="submit">Submit</string>
-    <string name="invalid_email">Invalid email</string>
-    <string name="tripBooked">%1$d trip(s) has(have) been booked 🚀🚀</string>
-    <string name="tripCancelled">A trip has been cancelled</string>
-    <string name="subscriptionError">Oops, something wrong happened</string>
-
-    <!--  General  -->
-    <string name="clean">Clean</string>
-
-    <!--  Navigation Components  -->
-    <string name="navigation_components_title">Navigation Components</string>
-
-    <!--  Flows  -->
-    <string name="flows_title">Flows</string>
-
-    <!--  GraphQL  -->
-    <string name="graphql_title">GraphQL</string>
-
-    <!--  Error Handling  -->
-    <string name="error_handling_title">Error handling</string>
-    <string name="error_handling_button">Launch coroutines</string>
-    <string name="error_handling_try_catch_with_launch">Try Catch With Launch</string>
-    <string name="error_handling_try_catch_with_nested_launch">Try Catch With Nested Launch</string>
-    <string name="error_handling_fetch_data_with_ex_handler">Fetch Data With Ex Handler</string>
-    <string name="error_handling_async_await_with_ex_handler">Async Await With Ex Handler</string>
-    <string name="error_handling_try_catch_with_async_await">Try Catch With Async Await</string>
-    <string name="error_handling_ex_handling_with_coroutine_scope">Ex Handling With Coroutine Scope</string>
-    <string name="error_handling_launch_supervisor_scope_with_ex_handler">Launch Supervisor Scope With Ex Handler</string>
-    <string name="error_handling_async_supervisor_scope_with_try_catch">Async Supervisor Scope With Try Catch</string>
 </resources>

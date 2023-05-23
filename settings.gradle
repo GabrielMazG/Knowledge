@@ -14,3 +14,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Knowledge"
 include ':app'
+include ':ComposeModule'
+include ':ErrorHandlerModule'
+include ':FlowModule'
+include ':NavigationComponentModule'
+include ':GraphQLModule'
+include ':CommonModule'

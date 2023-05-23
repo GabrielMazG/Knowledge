@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.knowledge">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -25,10 +24,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".navigationComponent.NavigationComponentMainActivity" />
-        <activity android:name=".flow.FlowMainActivity" />
-        <activity android:name=".graphQL.GraphQLMainActivity" />
-        <activity android:name=".errorHandling.ErrorHandlingMainActivity" />
+        <activity android:name="com.example.navigationcomponentmodule.NavigationComponentMainActivity" />
+        <activity android:name="com.example.flowmodule.FlowMainActivity" />
+        <activity android:name="com.example.graphqlmodule.GraphQLMainActivity" />
+        <activity android:name="com.example.errorhandlermodule.ErrorHandlingMainActivity" />
     </application>
 
 </manifest>

@@ -5,11 +5,17 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="testRunner" value="GRADLE" />
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="jbr-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/CommonModule" />
+            <option value="$PROJECT_DIR$/ComposeModule" />
+            <option value="$PROJECT_DIR$/ErrorHandlerModule" />
+            <option value="$PROJECT_DIR$/FlowModule" />
+            <option value="$PROJECT_DIR$/GraphQLModule" />
+            <option value="$PROJECT_DIR$/NavigationComponentModule" />
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
