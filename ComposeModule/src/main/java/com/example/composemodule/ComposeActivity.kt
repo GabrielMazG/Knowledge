@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.composemodule.databinding.ActivityComposeBinding
+import com.example.composemodule.jettip.JetTipActivity
 import com.example.composemodule.profile.ProfileActivity
 
 class ComposeActivity : AppCompatActivity() {
@@ -19,6 +20,9 @@ class ComposeActivity : AppCompatActivity() {
         with(binding) {
             profile.setOnClickListener {
                 startActivity(Intent(this@ComposeActivity, ProfileActivity::class.java))
+            }
+            jettip.setOnClickListener {
+                startActivity(Intent(this@ComposeActivity, JetTipActivity::class.java))
             }
         }
     }

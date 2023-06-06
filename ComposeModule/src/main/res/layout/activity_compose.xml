@@ -16,4 +16,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/jettip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_jet_tip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
