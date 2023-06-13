@@ -21,13 +21,14 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Divider
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
+import androidx.compose.material.Button
+import androidx.compose.material.ButtonColors
+import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.Card
+import androidx.compose.material.Divider
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -41,11 +42,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.composemodule.R
-import com.example.composemodule.profile.theme.ColorPrimary
-import com.example.composemodule.profile.theme.ColorPrimaryDark
-import com.example.composemodule.profile.theme.ColorSecondary
-import com.example.composemodule.profile.theme.ColorSecondaryLight
-import com.example.composemodule.profile.theme.ComposeTheme
+import com.example.composemodule.theme.ColorPrimary
+import com.example.composemodule.theme.ColorPrimaryDark
+import com.example.composemodule.theme.ColorSecondary
+import com.example.composemodule.theme.ColorSecondaryLight
+import com.example.composemodule.theme.ComposeTheme
 
 class ProfileActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,7 +55,7 @@ class ProfileActivity : ComponentActivity() {
             ComposeTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colors.background
                 ) {
                     CreateBizCard()
                 }
@@ -80,8 +81,8 @@ fun CreateBizCard() {
                 .height(390.dp)
                 .padding(12.dp),
             shape = RoundedCornerShape(corner = CornerSize(15.dp)),
-            colors = CardDefaults.cardColors(containerColor = ColorPrimary),
-            elevation = CardDefaults.cardElevation(4.dp)
+            backgroundColor = ColorPrimary,
+            elevation = 4.dp
         ) {
             Column(
                 modifier = Modifier.fillMaxHeight(),
@@ -92,12 +93,15 @@ fun CreateBizCard() {
                 Divider(modifier = Modifier.padding(8.dp))
                 CreateInfo()
                 Button(
+                    colors = ButtonDefaults.buttonColors(
+                        backgroundColor = ColorSecondaryLight
+                    ),
                     onClick = {
                         buttonClickState.value = !buttonClickState.value
                     }) {
                     Text(
                         text = "Portfolio",
-                        style = MaterialTheme.typography.labelSmall
+                        style = MaterialTheme.typography.button
                     )
                 }
                 if (buttonClickState.value) {
@@ -150,8 +154,8 @@ fun Portfolio(data: List<String>) {
                     .padding(8.dp)
                     .fillMaxWidth(),
                 shape = RoundedCornerShape(corner = CornerSize(5.dp)),
-                colors = CardDefaults.cardColors(containerColor = ColorPrimary),
-                elevation = CardDefaults.cardElevation(2.dp)
+                backgroundColor = ColorPrimary,
+                elevation = 2.dp
             ) {
                 Row(
                     modifier = Modifier
@@ -171,8 +175,8 @@ fun Portfolio(data: List<String>) {
                             color = ColorSecondary
                         )
                         Text(
-                            text = "A grat project",
-                            style = MaterialTheme.typography.labelSmall,
+                            text = "A great project",
+                            style = MaterialTheme.typography.body2,
                             color = ColorSecondaryLight
                         )
 
@@ -188,13 +192,13 @@ private fun CreateInfo() {
     Column(modifier = Modifier.padding(5.dp)) {
         Text(
             text = "Miles P.",
-            style = MaterialTheme.typography.titleLarge,
+            style = MaterialTheme.typography.h4,
             color = ColorSecondary
         )
         Text(
             text = "Android Compose Programmer",
             modifier = Modifier.padding(3.dp),
-            style = MaterialTheme.typography.bodyLarge,
+            style = MaterialTheme.typography.subtitle1,
             color = ColorSecondaryLight
         )
         Text(
@@ -213,10 +217,9 @@ private fun CreateImageProfile(modifier: Modifier = Modifier) {
             .padding(4.dp),
         shape = CircleShape,
         border = BorderStroke(0.dp, Color.LightGray),
-        tonalElevation = 4.dp,
-        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
+        elevation = 4.dp,
+        color = MaterialTheme.colors.onSurface.copy(alpha = 0.5f)
     ) {
-
         Image(
             painter = painterResource(id = R.drawable.profile_image),
             contentDescription = "Profile image",

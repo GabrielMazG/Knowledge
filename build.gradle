@@ -1,9 +1,43 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        // Core
+        core_ktx_version = '1.10.1'
+        appcompat_version = '1.6.1'
+        lifecycle_runtime_version = '2.6.1'
+        constraint_layout_version = '2.1.4'
+        navigation_version = '2.5.3'
+
+        // Testing
+        junit_version = '4.13.2'
+        junit_ext_version = '1.1.5'
+        espresso_version = '3.5.1'
+
+        // Material
+        material_version = '1.9.0'
+        material_icons_version = '1.4.3'
+
+        // Compose
+        compose_version = '1.4.2'
+        compose_bom_version = '2022.10.00'
+        compose_activity_version = '1.7.2'
+
+        // Apollo
+        apollo_version = '3.8.1'
+
+        // Images
+        koil_version = '1.4.0'
+
+        // Crypto
+        crypto_version = '1.1.0-alpha06'
+    }
+}
+
 plugins {
     id 'com.android.application' version '8.0.0' apply false
     id 'com.android.library' version '8.0.0' apply false
     id 'org.jetbrains.kotlin.android' version '1.8.10' apply false
-    id 'androidx.navigation.safeargs.kotlin' version '2.5.0' apply false
+    id 'androidx.navigation.safeargs.kotlin' version "$navigation_version" apply false
 }
 
 task clean(type: Delete) {

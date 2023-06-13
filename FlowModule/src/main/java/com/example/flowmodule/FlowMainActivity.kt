@@ -3,7 +3,9 @@ package com.example.flowmodule
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.example.flowmodule.databinding.ActivityMainFlowBinding
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.flow.collectLatest
@@ -41,29 +43,33 @@ class FlowMainActivity : AppCompatActivity() {
             binding.liveDataTitle.text = it
         }
 
-        lifecycleScope.launchWhenStarted {
-            // On rotation StateFlow emit again the result, it will show the SnackBar, but on click
-            // it will not show the SnackBar
-            viewModel.stateFlow.collectLatest {
-                binding.stateFlowTitle.text = it
-                Snackbar.make(
-                    binding.root,
-                    it,
-                    Snackbar.LENGTH_SHORT
-                ).show()
+        lifecycleScope.launch {
+            lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                // On rotation StateFlow emit again the result, it will show the SnackBar, but on click
+                // it will not show the SnackBar
+                viewModel.stateFlow.collectLatest {
+                    binding.stateFlowTitle.text = it
+                    Snackbar.make(
+                        binding.root,
+                        it,
+                        Snackbar.LENGTH_SHORT
+                    ).show()
+                }
             }
-        }
 
-        lifecycleScope.launchWhenStarted {
-            // The shared flow will show the SnackBar every time the button is clicked,
-            // even in rotation
-            viewModel.sharedFlow.collectLatest {
-                binding.sharedFlowTitle.text = it
-                Snackbar.make(
-                    binding.root,
-                    it,
-                    Snackbar.LENGTH_SHORT
-                ).show()
+            lifecycleScope.launch {
+                lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                    // The shared flow will show the SnackBar every time the button is clicked,
+                    // even in rotation
+                    viewModel.sharedFlow.collectLatest {
+                        binding.sharedFlowTitle.text = it
+                        Snackbar.make(
+                            binding.root,
+                            it,
+                            Snackbar.LENGTH_SHORT
+                        ).show()
+                    }
+                }
             }
         }
     }

@@ -3,6 +3,7 @@ package com.example.knowledge
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import com.example.composemodule.ComposeActivity
 import com.example.errorhandlermodule.ErrorHandlingMainActivity
 import com.example.flowmodule.FlowMainActivity

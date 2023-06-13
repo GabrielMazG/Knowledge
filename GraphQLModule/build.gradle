@@ -38,11 +38,9 @@ android {
 dependencies {
     implementation project(":CommonModule")
 
-    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
-    implementation 'com.apollographql.apollo3:apollo-runtime:3.8.1'
-    implementation 'io.coil-kt:coil:1.4.0'
+    implementation "androidx.security:security-crypto:$crypto_version"
+    implementation "com.apollographql.apollo3:apollo-runtime:$apollo_version"
+    implementation "io.coil-kt:coil:$koil_version"
 }
 
 apollo {
