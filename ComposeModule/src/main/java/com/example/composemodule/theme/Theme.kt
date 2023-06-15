@@ -16,7 +16,7 @@ private val DarkColorPalette = darkColors(
 private val LightColorPalette = lightColors(
     primary = ColorSecondary,
     secondary = ColorSecondaryLight,
-    surface = Black,
+    surface = ColorAccent,
     background = ColorPrimaryDark
 
 
@@ -32,7 +32,7 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun ComposeTheme(
+fun KnowledgeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {

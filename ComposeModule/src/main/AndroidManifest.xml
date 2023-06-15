@@ -3,15 +3,18 @@
 
     <application>
         <activity
+            android:name=".movieapp.MovieAppActivity"
+            android:exported="false"
+            android:label="@string/title_movieapp"
+            android:theme="@style/Theme.Knowledge" />
+        <activity
             android:name=".ComposeActivity"
             android:exported="false" />
-
         <activity
             android:name=".profile.ProfileActivity"
             android:exported="false"
             android:label="@string/title_activity_profile"
             android:theme="@style/Theme.Knowledge" />
-
         <activity
             android:name=".jettip.JetTipActivity"
             android:exported="false"

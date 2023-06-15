@@ -21,12 +21,13 @@ buildscript {
         compose_version = '1.4.2'
         compose_bom_version = '2022.10.00'
         compose_activity_version = '1.7.2'
+        navigation_compose_version = "2.5.3"
 
         // Apollo
         apollo_version = '3.8.1'
 
         // Images
-        koil_version = '1.4.0'
+        koil_version = '2.4.0'
 
         // Crypto
         crypto_version = '1.1.0-alpha06'

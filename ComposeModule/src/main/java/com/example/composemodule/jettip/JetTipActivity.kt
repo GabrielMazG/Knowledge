@@ -49,7 +49,8 @@ import com.example.composemodule.theme.ColorPrimary
 import com.example.composemodule.theme.ColorPrimaryDark
 import com.example.composemodule.theme.ColorSecondary
 import com.example.composemodule.theme.ColorSecondaryLight
-import com.example.composemodule.theme.ComposeTheme
+import com.example.composemodule.theme.KnowledgeTheme
+import com.example.composemodule.theme.Typography
 
 class JetTipActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,7 +65,7 @@ class JetTipActivity : ComponentActivity() {
 
 @Composable
 fun MyApp(content: @Composable () -> Unit) {
-    ComposeTheme {
+    KnowledgeTheme {
         content()
     }
 }
@@ -97,14 +98,14 @@ fun TopHeader(totalPerPerson: Double = 0.0) {
         ) {
             Text(
                 text = "Total Per Person",
-                style = MaterialTheme.typography.h5,
+                style = Typography.h5,
                 color = ColorPrimary,
                 fontFamily = FontFamily.Cursive
             )
             val total = "%.2f".format(totalPerPerson)
             Text(
                 text = "\$$total",
-                style = MaterialTheme.typography.h4,
+                style = Typography.h4,
                 color = ColorPrimary,
                 fontWeight = FontWeight.Bold
             )

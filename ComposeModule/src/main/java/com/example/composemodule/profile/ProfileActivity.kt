@@ -22,7 +22,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
-import androidx.compose.material.ButtonColors
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Card
 import androidx.compose.material.Divider
@@ -46,13 +45,13 @@ import com.example.composemodule.theme.ColorPrimary
 import com.example.composemodule.theme.ColorPrimaryDark
 import com.example.composemodule.theme.ColorSecondary
 import com.example.composemodule.theme.ColorSecondaryLight
-import com.example.composemodule.theme.ComposeTheme
+import com.example.composemodule.theme.KnowledgeTheme
 
 class ProfileActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ComposeTheme {
+            KnowledgeTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     color = MaterialTheme.colors.background
@@ -101,7 +100,8 @@ fun CreateBizCard() {
                     }) {
                     Text(
                         text = "Portfolio",
-                        style = MaterialTheme.typography.button
+                        style = MaterialTheme.typography.button,
+                        color = ColorPrimaryDark
                     )
                 }
                 if (buttonClickState.value) {
@@ -232,7 +232,7 @@ private fun CreateImageProfile(modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    ComposeTheme {
+    KnowledgeTheme {
         CreateBizCard()
     }
 }
