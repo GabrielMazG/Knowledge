@@ -1,4 +1,4 @@
-package com.example.flowmodule
+package com.example.flowmodule.compare
 
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -6,21 +6,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import com.example.flowmodule.databinding.ActivityMainFlowBinding
+import com.example.flowmodule.databinding.ActivityCompareFlowBinding
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-class FlowMainActivity : AppCompatActivity() {
+class FlowCompareActivity : AppCompatActivity() {
 
-    private var _binding: ActivityMainFlowBinding? = null
+    private var _binding: ActivityCompareFlowBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: FlowMainViewModel by viewModels()
+    private val viewModel: FlowCompareViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        _binding = ActivityMainFlowBinding.inflate(layoutInflater)
+        _binding = ActivityCompareFlowBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.liveData.setOnClickListener { viewModel.triggerLiveData() }

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Container"
+    android:padding="16dp"
+    tools:context=".FlowActivity">
+
+    <Button
+        android:id="@+id/hot_flow"
+        style="@style/FullWidth"
+        android:text="@string/button_hot_flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cold_flow"
+        style="@style/FullWidth"
+        android:text="@string/button_cold_flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hot_flow" />
+
+    <Button
+        android:id="@+id/hot_flow_without_cancellation_exception"
+        style="@style/FullWidth"
+        android:text="@string/button_hot_flow_without_exception"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cold_flow" />
+
+    <Button
+        android:id="@+id/cold_flow_without_cancellation_exception"
+        style="@style/FullWidth"
+        android:text="@string/button_cold_flow_without_exception"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hot_flow_without_cancellation_exception" />
+
+    <ScrollView
+        style="@style/FullWidth"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cold_flow_without_cancellation_exception">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/result_container"
+            style="@style/FullWidth"
+            android:gravity="top"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,6 +20,11 @@
             android:exported="false"
             android:label="@string/title_activity_jet_tip"
             android:theme="@style/Theme.Knowledge" />
+        <activity
+            android:name=".jetnoteapp.JetNoteActivity"
+            android:exported="false"
+            android:label="@string/title_jetnoteapp"
+            android:theme="@style/Theme.Knowledge" />
     </application>
 
 </manifest>

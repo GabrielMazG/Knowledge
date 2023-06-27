@@ -77,12 +77,12 @@ fun DetailsScreen(navController: NavController, movieId: String?) {
                 text = movieId.toString(),
                 style = Typography.h5
             )
-            it
 
             Surface(
                 modifier = Modifier
                     .fillMaxHeight()
                     .fillMaxWidth()
+                    .padding(it)
             ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,

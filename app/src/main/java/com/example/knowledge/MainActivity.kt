@@ -3,10 +3,9 @@ package com.example.knowledge
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 import com.example.composemodule.ComposeActivity
 import com.example.errorhandlermodule.ErrorHandlingMainActivity
-import com.example.flowmodule.FlowMainActivity
+import com.example.flowmodule.FlowActivity
 import com.example.graphqlmodule.GraphQLMainActivity
 import com.example.knowledge.databinding.ActivityMainBinding
 import com.example.navigationcomponentmodule.NavigationComponentMainActivity
@@ -32,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             flows.setOnClickListener {
-                startActivity(Intent(this@MainActivity, FlowMainActivity::class.java))
+                startActivity(Intent(this@MainActivity, FlowActivity::class.java))
             }
 
             graphQL.setOnClickListener {

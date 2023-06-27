@@ -34,17 +34,17 @@ fun HomeScreen(navController: NavController) {
             }
         },
     ) {
-        MainContent(navController = navController)
-        it
+        MainContent(modifier = Modifier.padding(it), navController = navController)
     }
 }
 
 @Composable
 fun MainContent(
+    modifier: Modifier,
     navController: NavController,
     movieList: List<Movie> = getMovies()
 ) {
-    Column(modifier = Modifier.padding(8.dp)) {
+    Column(modifier = modifier.padding(8.dp)) {
         LazyColumn() {
             items(items = movieList) {
                 MovieRow(movie = it) { movie ->

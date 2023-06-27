@@ -1,6 +1,24 @@
 <resources>
     <string name="title_flow_activity_main">FlowMainActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
+
+    <!--  Titles  -->
+    <string name="title_compare_flow">Compare</string>
+    <string name="title_example1">Simple example</string>
+    <string name="title_example2">Other example</string>
+    <string name="title_example3">StateFlow example</string>
+    <string name="title_example4">SharedFlow example</string>
+    <string name="title_example5">HotFlow vs ColdFlow</string>
+
+    <!--  Flow Examples  -->
+    <string name="example_text">Check the log\n|\nV</string>
+
+    <!--  Hot-Cold Flow  -->
+    <string name="button_hot_flow">Hot Flow</string>
+    <string name="button_cold_flow">Cold Flow</string>
+    <string name="button_hot_flow_without_exception">Hot Flow without CancellationException</string>
+    <string name="button_cold_flow_without_exception">Cold Flow without CancellationException</string>
+
+    <!--  Flows names  -->
+    <string name="default_name">Hello World</string>
+
 </resources>

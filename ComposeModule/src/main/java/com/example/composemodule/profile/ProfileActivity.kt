@@ -29,8 +29,10 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
@@ -65,7 +67,7 @@ class ProfileActivity : ComponentActivity() {
 
 @Composable
 fun CreateBizCard() {
-    val buttonClickState = remember {
+    var buttonClickState by remember {
         mutableStateOf(false)
     }
     Surface(
@@ -96,15 +98,15 @@ fun CreateBizCard() {
                         backgroundColor = ColorSecondaryLight
                     ),
                     onClick = {
-                        buttonClickState.value = !buttonClickState.value
+                        buttonClickState = !buttonClickState
                     }) {
                     Text(
                         text = "Portfolio",
                         style = MaterialTheme.typography.button,
-                        color = ColorPrimaryDark
+                        color = ColorPrimary
                     )
                 }
-                if (buttonClickState.value) {
+                if (buttonClickState) {
                     Content()
                 } else {
                     Box {}

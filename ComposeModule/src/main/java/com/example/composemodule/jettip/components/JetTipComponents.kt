@@ -74,10 +74,11 @@ fun InputField(
 @Preview
 @Composable
 fun InputFieldPreview() {
+    val valueState = remember {
+        mutableStateOf("")
+    }
     InputField(
-        valueState = remember {
-            mutableStateOf("")
-        },
+        valueState = valueState,
         labelId = "Enter Bill",
         enabled = true,
         isSingleLine = true,

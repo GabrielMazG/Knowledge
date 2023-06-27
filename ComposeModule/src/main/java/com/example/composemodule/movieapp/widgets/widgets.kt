@@ -21,8 +21,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.RectangleShape
@@ -47,7 +49,7 @@ import com.example.composemodule.theme.Typography
 @Preview
 @Composable
 fun MovieRow(movie: Movie = getMovies().first(), onItemClick: (String) -> Unit = {}) {
-    val expanded = remember {
+    var expanded by remember {
         mutableStateOf(false)
     }
 
@@ -89,7 +91,7 @@ fun MovieRow(movie: Movie = getMovies().first(), onItemClick: (String) -> Unit =
                 Text(
                     text = "Released: ${movie.year}", style = Typography.caption
                 )
-                AnimatedVisibility(visible = expanded.value) {
+                AnimatedVisibility(visible = expanded) {
                     Column {
                         Text(buildAnnotatedString {
                             withStyle(
@@ -134,7 +136,7 @@ fun MovieRow(movie: Movie = getMovies().first(), onItemClick: (String) -> Unit =
                     thickness = 0.5.dp
                 )
                 Icon(
-                    imageVector = if (expanded.value)
+                    imageVector = if (expanded)
                         Icons.Filled.KeyboardArrowUp
                     else
                         Icons.Filled.KeyboardArrowDown,
@@ -143,7 +145,7 @@ fun MovieRow(movie: Movie = getMovies().first(), onItemClick: (String) -> Unit =
                         .fillMaxWidth()
                         .size(30.dp)
                         .clickable {
-                            expanded.value = !expanded.value
+                            expanded = !expanded
                         },
                     tint = ColorSecondary
                 )

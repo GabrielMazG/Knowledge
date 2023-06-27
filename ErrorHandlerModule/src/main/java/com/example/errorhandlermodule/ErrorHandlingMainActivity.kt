@@ -1,11 +1,9 @@
 package com.example.errorhandlermodule
 
 import android.os.Bundle
-import android.widget.LinearLayout.LayoutParams
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
+import com.example.commonmodule.extensions.addText
 import com.example.errorhandlermodule.databinding.ActivityMainErrorHandlingBinding
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Dispatchers
@@ -203,21 +201,7 @@ class ErrorHandlingMainActivity : AppCompatActivity() {
     }
 
     private fun addText(output: String) {
-        val textView = TextView(this).apply {
-            layoutParams =
-                LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT).apply {
-                    setMargins(0, 20, 0, 0)
-                    setPadding(10, 10, 0, 10)
-                }
-            text = output
-            setTextColor(
-                ContextCompat.getColor(
-                    this@ErrorHandlingMainActivity,
-                    R.color.white
-                )
-            )
-        }
-        binding.textContainer.addView(textView)
+        lifecycleScope.launch { binding.textContainer.addText(output) }
     }
 
     override fun onDestroy() {

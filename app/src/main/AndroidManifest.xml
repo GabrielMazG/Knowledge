@@ -25,7 +25,7 @@
         </activity>
 
         <activity android:name="com.example.navigationcomponentmodule.NavigationComponentMainActivity" />
-        <activity android:name="com.example.flowmodule.FlowMainActivity" />
+        <activity android:name="com.example.flowmodule.compare.FlowCompareActivity" />
         <activity android:name="com.example.graphqlmodule.GraphQLMainActivity" />
         <activity android:name="com.example.errorhandlermodule.ErrorHandlingMainActivity" />
     </application>

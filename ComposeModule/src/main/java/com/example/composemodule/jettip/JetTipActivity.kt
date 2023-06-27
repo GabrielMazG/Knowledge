@@ -19,7 +19,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardActions
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Slider
 import androidx.compose.material.SliderDefaults
 import androidx.compose.material.Surface
@@ -29,8 +28,10 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Remove
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.ExperimentalComposeUiApi
@@ -148,10 +149,10 @@ fun BillForm(
         totalBillState.value.trim().isNotEmpty()
     }
     val keyboardController = LocalSoftwareKeyboardController.current
-    val sliderPositionState = remember {
+    var sliderPositionState by remember {
         mutableStateOf(0f)
     }
-    val tipPercentage = (sliderPositionState.value * 100).toInt()
+    val tipPercentage = (sliderPositionState * 100).toInt()
 
     TopHeader(totalPerPerson = totalPerPersonState.value)
 
@@ -260,9 +261,9 @@ fun BillForm(
                     Spacer(modifier = Modifier.height(10.dp))
 
                     Slider(
-                        value = sliderPositionState.value,
+                        value = sliderPositionState,
                         onValueChange = { newVal ->
-                            sliderPositionState.value = newVal
+                            sliderPositionState = newVal
                             Log.d(
                                 "BillForm",
                                 "BillForm: ${totalBillState.value.toDouble()} - $tipPercentage"

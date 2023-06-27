@@ -1,4 +1,4 @@
-package com.example.flowmodule
+package com.example.flowmodule.compare
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,7 +8,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-class FlowMainViewModel : ViewModel() {
+class FlowCompareViewModel : ViewModel() {
 
     private val _liveData = MutableLiveData("Hello World")
     val liveData: LiveData<String> = _liveData

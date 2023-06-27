@@ -3,10 +3,22 @@
 
     <application>
         <activity
-            android:name=".FlowMainActivity"
+            android:name=".compare.FlowCompareActivity"
             android:exported="false"
             android:label="@string/title_flow_activity_main"
             android:theme="@style/Theme.Knowledge" />
+
+        <activity android:name=".FlowActivity" />
+
+        <activity android:name=".examples.FlowExample1Activity" />
+
+        <activity android:name=".examples.FlowExample2Activity" />
+
+        <activity android:name=".examples.FlowExample3Activity" />
+
+        <activity android:name=".examples.FlowExample4Activity" />
+
+        <activity android:name=".examples.FlowExample5Activity" />
     </application>
 
 </manifest>
