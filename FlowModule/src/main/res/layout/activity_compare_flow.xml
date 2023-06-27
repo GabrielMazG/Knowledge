@@ -2,94 +2,76 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.example.flowmodule.FlowMainActivity">
+    style="@style/Container"
+    tools:context="com.example.flowmodule.compare.FlowCompareActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
+        style="@style/FullWidth"
+        android:padding="@dimen/medium_padding">
 
         <TextView
             android:id="@+id/liveDataTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Hello World"
-            android:textColor="@color/colorSecondary"
+            style="@style/Wrapper"
+            android:text="@string/default_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/liveData"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Live Data"
+            style="@style/FullWidth"
+            android:text="@string/live_data"
             app:layout_constraintEnd_toEndOf="@id/liveDataTitle"
             app:layout_constraintStart_toStartOf="@id/liveDataTitle"
             app:layout_constraintTop_toBottomOf="@id/liveDataTitle" />
 
         <TextView
             android:id="@+id/stateFlowTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:text="Hello World"
-            android:textColor="@color/colorSecondary"
+            style="@style/Wrapper"
+            android:layout_marginTop="@dimen/xlarge_margin"
+            android:text="@string/default_name"
             app:layout_constraintEnd_toEndOf="@id/liveData"
             app:layout_constraintStart_toStartOf="@id/liveData"
             app:layout_constraintTop_toBottomOf="@id/liveData" />
 
         <Button
             android:id="@+id/stateFlow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="State Flow"
+            style="@style/FullWidth"
+            android:text="@string/state_flow"
             app:layout_constraintEnd_toEndOf="@id/stateFlowTitle"
             app:layout_constraintStart_toStartOf="@id/stateFlowTitle"
             app:layout_constraintTop_toBottomOf="@id/stateFlowTitle" />
 
         <TextView
             android:id="@+id/flowTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:text="Hello World"
-            android:textColor="@color/colorSecondary"
+            style="@style/Wrapper"
+            android:layout_marginTop="@dimen/xlarge_margin"
+            android:text="@string/default_name"
             app:layout_constraintEnd_toEndOf="@id/stateFlow"
             app:layout_constraintStart_toStartOf="@id/stateFlow"
             app:layout_constraintTop_toBottomOf="@id/stateFlow" />
 
         <Button
             android:id="@+id/flow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Flow"
+            style="@style/FullWidth"
+            android:text="@string/flow"
             app:layout_constraintEnd_toEndOf="@id/flowTitle"
             app:layout_constraintStart_toStartOf="@id/flowTitle"
             app:layout_constraintTop_toBottomOf="@id/flowTitle" />
 
         <TextView
             android:id="@+id/sharedFlowTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
-            android:text="Hello World"
-            android:textColor="@color/colorSecondary"
+            style="@style/Wrapper"
+            android:layout_marginTop="@dimen/xlarge_margin"
+            android:text="@string/default_name"
             app:layout_constraintEnd_toEndOf="@id/flow"
             app:layout_constraintStart_toStartOf="@id/flow"
             app:layout_constraintTop_toBottomOf="@id/flow" />
 
         <Button
             android:id="@+id/sharedFlow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Shared Flow"
+            style="@style/FullWidth"
+            android:text="@string/shared_flow"
             app:layout_constraintEnd_toEndOf="@id/sharedFlowTitle"
             app:layout_constraintStart_toStartOf="@id/sharedFlowTitle"
             app:layout_constraintTop_toBottomOf="@id/sharedFlowTitle" />

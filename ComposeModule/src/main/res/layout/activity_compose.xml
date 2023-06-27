@@ -2,15 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
+    style="@style/Container"
+    android:padding="@dimen/medium_padding"
     tools:context=".ComposeActivity">
 
     <Button
         android:id="@+id/profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/title_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,8 +16,7 @@
 
     <Button
         android:id="@+id/jettip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/title_jet_tip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,11 +24,18 @@
 
     <Button
         android:id="@+id/movieapp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/title_movieapp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/jettip" />
+
+    <Button
+        android:id="@+id/jetnoteapp"
+        style="@style/FullWidth"
+        android:text="@string/title_jetnoteapp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movieapp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

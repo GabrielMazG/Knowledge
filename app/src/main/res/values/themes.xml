@@ -14,6 +14,9 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/colorPrimaryDark</item>
         <item name="snackbarStyle">@style/snackBarStyle</item>
+
+        <!-- Default text view color -->
+        <item name="android:textColor">@color/colorSecondary</item>
     </style>
 
     <style name="snackBarStyle" parent="Widget.MaterialComponents.Snackbar">
@@ -21,7 +24,4 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="textStyle" parent="Widget.MaterialComponents.TextView">
-        <item name="android:color">@color/colorSecondary</item>
-    </style>
 </resources>

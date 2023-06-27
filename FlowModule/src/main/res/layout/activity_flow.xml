@@ -3,43 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Container"
-    android:padding="16dp"
+    android:padding="@dimen/medium_padding"
     tools:context=".FlowActivity">
 
     <Button
         android:id="@+id/compare"
         style="@style/FullWidth"
         android:text="@string/title_compare_flow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/example1"
         style="@style/FullWidth"
         android:text="@string/title_example1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/compare" />
 
     <Button
         android:id="@+id/example2"
         style="@style/FullWidth"
         android:text="@string/title_example2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/example1" />
 
     <Button
         android:id="@+id/example3"
         style="@style/FullWidth"
         android:text="@string/title_example3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/example2" />
 
     <Button
         android:id="@+id/example4"
         style="@style/FullWidth"
         android:text="@string/title_example4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/example3" />
 
     <Button
         android:id="@+id/example5"
         style="@style/FullWidth"
         android:text="@string/title_example5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/example4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

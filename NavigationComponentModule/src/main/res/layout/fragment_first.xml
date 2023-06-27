@@ -2,17 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/purple_200"
-    tools:context=".SecondFragment">
+    style="@style/Container"
+    android:background="@color/colorSecondary"
+    tools:context=".NavigationComponentMainActivity">
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Wrapper"
         android:text="1"
-        android:textSize="100sp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/h1"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

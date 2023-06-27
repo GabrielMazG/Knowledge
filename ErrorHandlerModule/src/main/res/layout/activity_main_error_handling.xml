@@ -3,15 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="16dp"
+    style="@style/Container"
+    android:padding="@dimen/medium_padding"
     tools:context="com.example.errorhandlermodule.ErrorHandlingMainActivity">
 
     <Button
         android:id="@+id/tryCatchWithLaunch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/error_handling_try_catch_with_launch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,8 +17,7 @@
 
     <Button
         android:id="@+id/tryCatchWithNestedLaunch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/error_handling_try_catch_with_nested_launch"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
@@ -28,8 +25,7 @@
 
     <Button
         android:id="@+id/fetchDataWithExHandler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/error_handling_fetch_data_with_ex_handler"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
@@ -37,8 +33,7 @@
 
     <Button
         android:id="@+id/asyncAwaitWithExHandler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/error_handling_async_await_with_ex_handler"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
@@ -46,8 +41,7 @@
 
     <Button
         android:id="@+id/tryCatchWithAsyncAwait"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/error_handling_try_catch_with_async_await"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
@@ -55,8 +49,7 @@
 
     <Button
         android:id="@+id/exHandlingWithCoroutineScope"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/error_handling_ex_handling_with_coroutine_scope"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
@@ -64,8 +57,7 @@
 
     <Button
         android:id="@+id/launchSupervisorScopeWithExHandler"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/error_handling_launch_supervisor_scope_with_ex_handler"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
@@ -73,8 +65,7 @@
 
     <Button
         android:id="@+id/asyncSupervisorScopeWithTryCatch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/error_handling_async_supervisor_scope_with_try_catch"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
@@ -82,8 +73,7 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/textContainer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@id/asyncAwaitWithExHandler"
         app:layout_constraintStart_toStartOf="@id/asyncAwaitWithExHandler"

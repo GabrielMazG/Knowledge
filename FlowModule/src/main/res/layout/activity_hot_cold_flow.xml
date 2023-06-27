@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Container"
-    android:padding="16dp"
+    android:padding="@dimen/medium_padding"
     tools:context=".FlowActivity">
 
     <Button
@@ -41,9 +41,11 @@
 
     <ScrollView
         style="@style/FullWidth"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/empty"
         android:layout_marginTop="@dimen/small_margin"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cold_flow_without_cancellation_exception">
 
         <androidx.appcompat.widget.LinearLayoutCompat

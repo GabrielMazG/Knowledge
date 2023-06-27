@@ -9,7 +9,6 @@ import com.example.commonmodule.extensions.clearText
 import com.example.flowmodule.databinding.ActivityHotColdFlowBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.flow
@@ -185,10 +184,6 @@ class FlowExample5Activity : AppCompatActivity() {
 
     private suspend fun addText(output: String) {
         binding.resultContainer.addText(output)
-
-        coroutineScope {
-
-        }
     }
 
     companion object {

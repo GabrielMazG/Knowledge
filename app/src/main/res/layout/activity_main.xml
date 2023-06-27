@@ -2,15 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
+    style="@style/Container"
+    android:padding="@dimen/medium_padding"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/navigationComponents"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/navigation_components_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,8 +16,7 @@
 
     <Button
         android:id="@+id/flows"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/flows_title"
         app:layout_constraintEnd_toEndOf="@id/navigationComponents"
         app:layout_constraintStart_toStartOf="@id/navigationComponents"
@@ -27,8 +24,7 @@
 
     <Button
         android:id="@+id/graphQL"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/graphql_title"
         app:layout_constraintEnd_toEndOf="@id/navigationComponents"
         app:layout_constraintStart_toStartOf="@id/navigationComponents"
@@ -36,8 +32,7 @@
 
     <Button
         android:id="@+id/errorHandling"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/error_handling_title"
         app:layout_constraintEnd_toEndOf="@id/navigationComponents"
         app:layout_constraintStart_toStartOf="@id/navigationComponents"
@@ -45,8 +40,7 @@
 
     <Button
         android:id="@+id/compose"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/FullWidth"
         android:text="@string/compose_title"
         app:layout_constraintEnd_toEndOf="@id/navigationComponents"
         app:layout_constraintStart_toStartOf="@id/navigationComponents"

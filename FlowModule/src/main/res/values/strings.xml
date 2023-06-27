@@ -20,5 +20,9 @@
 
     <!--  Flows names  -->
     <string name="default_name">Hello World</string>
+    <string name="live_data">Live Data</string>
+    <string name="state_flow">State Flow</string>
+    <string name="flow">Flow</string>
+    <string name="shared_flow">Shared Flow</string>
 
 </resources>

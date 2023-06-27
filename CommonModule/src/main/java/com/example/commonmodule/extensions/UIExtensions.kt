@@ -3,8 +3,6 @@ package com.example.commonmodule.extensions
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.widget.LinearLayoutCompat
-import androidx.core.content.ContextCompat
-import com.example.commonmodule.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -25,12 +23,6 @@ suspend fun LinearLayoutCompat.addText(output: String) {
                 setPadding(10, 10, 0, 10)
             }
         text = output
-        setTextColor(
-            ContextCompat.getColor(
-                context,
-                R.color.colorSecondaryLight
-            )
-        )
     }
     withContext(Dispatchers.Main) {
         addView(textView)
