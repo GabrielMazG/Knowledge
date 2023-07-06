@@ -7,33 +7,33 @@
     android:padding="@dimen/medium_padding"
     tools:context=".FlowActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/hot_flow"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/button_hot_flow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cold_flow"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/button_cold_flow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hot_flow" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/hot_flow_without_cancellation_exception"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/button_hot_flow_without_exception"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cold_flow" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/cold_flow_without_cancellation_exception"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/button_cold_flow_without_exception"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

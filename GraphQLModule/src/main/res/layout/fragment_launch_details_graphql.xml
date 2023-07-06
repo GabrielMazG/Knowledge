@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/rocket_name"
         tools:text="Site" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/book_button"
         style="@style/Wrapper"
         android:layout_width="@dimen/empty"

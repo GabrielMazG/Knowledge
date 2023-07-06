@@ -8,6 +8,10 @@
     <string name="title_example3">StateFlow example</string>
     <string name="title_example4">SharedFlow example</string>
     <string name="title_example5">HotFlow vs ColdFlow</string>
+    <string name="title_stock_app">Stock App</string>
+    <string name="title_stock_app_2">Stock App2</string>
+    <string name="title_stock_app_3">Stock App3</string>
+    <string name="title_stock_app_4">Stock App4</string>
 
     <!--  Flow Examples  -->
     <string name="example_text">Check the log\n|\nV</string>

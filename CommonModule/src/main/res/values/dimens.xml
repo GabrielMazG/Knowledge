@@ -36,7 +36,13 @@
     <dimen name="spacing">-10dp</dimen>
     <dimen name="empty">0dp</dimen>
     <dimen name="one">1dp</dimen>
+    <dimen name="button_height">36dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="toolbar_height">52dp</dimen>
     <dimen name="medium_image">100dp</dimen>
     <dimen name="big_image">200dp</dimen>
+
+    <!--  Elevation  -->
+    <dimen name="small_elevation">2dp</dimen>
+    <dimen name="medium_elevation">4dp</dimen>
 </resources>

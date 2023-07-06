@@ -17,9 +17,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/liveData"
-            style="@style/FullWidth"
+            style="@style/NormalButton"
             android:text="@string/live_data"
             app:layout_constraintEnd_toEndOf="@id/liveDataTitle"
             app:layout_constraintStart_toStartOf="@id/liveDataTitle"
@@ -34,9 +34,9 @@
             app:layout_constraintStart_toStartOf="@id/liveData"
             app:layout_constraintTop_toBottomOf="@id/liveData" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/stateFlow"
-            style="@style/FullWidth"
+            style="@style/NormalButton"
             android:text="@string/state_flow"
             app:layout_constraintEnd_toEndOf="@id/stateFlowTitle"
             app:layout_constraintStart_toStartOf="@id/stateFlowTitle"
@@ -51,9 +51,9 @@
             app:layout_constraintStart_toStartOf="@id/stateFlow"
             app:layout_constraintTop_toBottomOf="@id/stateFlow" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/flow"
-            style="@style/FullWidth"
+            style="@style/NormalButton"
             android:text="@string/flow"
             app:layout_constraintEnd_toEndOf="@id/flowTitle"
             app:layout_constraintStart_toStartOf="@id/flowTitle"
@@ -68,9 +68,9 @@
             app:layout_constraintStart_toStartOf="@id/flow"
             app:layout_constraintTop_toBottomOf="@id/flow" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/sharedFlow"
-            style="@style/FullWidth"
+            style="@style/NormalButton"
             android:text="@string/shared_flow"
             app:layout_constraintEnd_toEndOf="@id/sharedFlowTitle"
             app:layout_constraintStart_toStartOf="@id/sharedFlowTitle"

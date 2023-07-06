@@ -7,65 +7,65 @@
     android:padding="@dimen/medium_padding"
     tools:context="com.example.errorhandlermodule.ErrorHandlingMainActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/tryCatchWithLaunch"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/error_handling_try_catch_with_launch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/tryCatchWithNestedLaunch"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/error_handling_try_catch_with_nested_launch"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
         app:layout_constraintTop_toBottomOf="@id/tryCatchWithLaunch" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/fetchDataWithExHandler"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/error_handling_fetch_data_with_ex_handler"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
         app:layout_constraintTop_toBottomOf="@id/tryCatchWithNestedLaunch" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/asyncAwaitWithExHandler"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/error_handling_async_await_with_ex_handler"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
         app:layout_constraintTop_toBottomOf="@id/fetchDataWithExHandler" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/tryCatchWithAsyncAwait"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/error_handling_try_catch_with_async_await"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
         app:layout_constraintTop_toBottomOf="@id/asyncAwaitWithExHandler" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/exHandlingWithCoroutineScope"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/error_handling_ex_handling_with_coroutine_scope"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
         app:layout_constraintTop_toBottomOf="@id/tryCatchWithAsyncAwait" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/launchSupervisorScopeWithExHandler"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/error_handling_launch_supervisor_scope_with_ex_handler"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"
         app:layout_constraintTop_toBottomOf="@id/exHandlingWithCoroutineScope" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/asyncSupervisorScopeWithTryCatch"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/error_handling_async_supervisor_scope_with_try_catch"
         app:layout_constraintEnd_toEndOf="@id/tryCatchWithLaunch"
         app:layout_constraintStart_toStartOf="@id/tryCatchWithLaunch"

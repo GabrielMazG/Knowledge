@@ -6,41 +6,41 @@
     android:padding="@dimen/medium_padding"
     tools:context=".MainActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/navigationComponents"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/navigation_components_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/flows"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/flows_title"
         app:layout_constraintEnd_toEndOf="@id/navigationComponents"
         app:layout_constraintStart_toStartOf="@id/navigationComponents"
         app:layout_constraintTop_toBottomOf="@id/navigationComponents" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/graphQL"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/graphql_title"
         app:layout_constraintEnd_toEndOf="@id/navigationComponents"
         app:layout_constraintStart_toStartOf="@id/navigationComponents"
         app:layout_constraintTop_toBottomOf="@id/flows" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/errorHandling"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/error_handling_title"
         app:layout_constraintEnd_toEndOf="@id/navigationComponents"
         app:layout_constraintStart_toStartOf="@id/navigationComponents"
         app:layout_constraintTop_toBottomOf="@id/graphQL" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/compose"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/compose_title"
         app:layout_constraintEnd_toEndOf="@id/navigationComponents"
         app:layout_constraintStart_toStartOf="@id/navigationComponents"

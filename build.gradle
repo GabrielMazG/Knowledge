@@ -7,6 +7,7 @@ buildscript {
         lifecycle_runtime_version = '2.6.1'
         constraint_layout_version = '2.1.4'
         navigation_version = '2.5.3'
+        lifecycle_version = '2.6.1'
 
         // Testing
         junit_version = '4.13.2'
@@ -31,6 +32,16 @@ buildscript {
 
         // Crypto
         crypto_version = '1.1.0-alpha06'
+
+        // Open CVS
+        opencvs_version = '5.5.2'
+
+        // JodaTime
+        jodatime_version = '2.10.13'
+
+        // Retrofit
+        retrofit_version = '2.9.0'
+        retrofit_rxadapter_version = '2.7.1'
     }
 }
 

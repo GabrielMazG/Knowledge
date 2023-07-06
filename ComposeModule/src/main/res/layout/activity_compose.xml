@@ -6,33 +6,33 @@
     android:padding="@dimen/medium_padding"
     tools:context=".ComposeActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/profile"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/title_profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/jettip"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/title_jet_tip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/profile" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/movieapp"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/title_movieapp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/jettip" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/jetnoteapp"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/title_jetnoteapp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

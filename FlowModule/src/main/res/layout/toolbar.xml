@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    style="@style/FullWidth"
+    android:layout_height="@dimen/toolbar_height"
+    android:minHeight="@dimen/toolbar_height"
+    app:contentInsetEnd="@dimen/empty"
+    app:contentInsetLeft="@dimen/empty"
+    app:contentInsetRight="@dimen/empty"
+    app:contentInsetStart="@dimen/empty">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/Container"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/btnToolbarBack"
+            style="@style/Wrapper"
+            android:backgroundTint="@color/colorPrimary"
+            android:padding="@dimen/medium_padding"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            style="@style/Wrapper"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="@dimen/xxlarge_padding"
+            android:paddingEnd="@dimen/xxlarge_padding"
+            android:textColor="@color/white"
+            android:textSize="@dimen/subtitle1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>

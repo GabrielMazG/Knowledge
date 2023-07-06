@@ -33,7 +33,7 @@
             style="@style/FullWidth" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/submit"
         style="@style/Wrapper"
         android:layout_width="@dimen/empty"

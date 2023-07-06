@@ -17,6 +17,8 @@
 
         <!-- Default text view color -->
         <item name="android:textColor">@color/colorSecondary</item>
+        <!-- Default button style -->
+        <item name="buttonStyle">@style/NormalButton</item>
     </style>
 
     <style name="snackBarStyle" parent="Widget.MaterialComponents.Snackbar">

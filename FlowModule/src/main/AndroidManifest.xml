@@ -19,6 +19,14 @@
         <activity android:name=".examples.FlowExample4Activity" />
 
         <activity android:name=".examples.FlowExample5Activity" />
+
+        <activity android:name=".stockapp.usecase1.FlowUseCase1Activity" />
+
+        <activity android:name=".stockapp.usecase2.FlowUseCase2Activity" />
+
+        <activity android:name=".stockapp.usecase3.FlowUseCase3Activity" />
+
+        <activity android:name=".stockapp.usecase4.FlowUseCase4Activity" />
     </application>
 
 </manifest>

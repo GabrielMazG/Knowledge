@@ -26,4 +26,19 @@
         <item name="android:layout_width">@dimen/empty</item>
         <item name="android:background">@color/colorSecondaryLight</item>
     </style>
+
+    <style name="NormalButton" parent="Widget.AppCompat.Button">
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">@dimen/small_margin</item>
+        <item name="android:layout_marginBottom">@dimen/small_margin</item>
+        <item name="android:elevation">@dimen/medium_elevation</item>
+        <item name="android:background">@drawable/normal_button_color</item>
+
+    </style>
+
+    <style name="AppButton" parent="NormalButton">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:background">@drawable/app_button_color</item>
+    </style>
 </resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Container"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbarLayout"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/lastUpdateTime"
+        style="@style/FullWidth"
+        android:gravity="end"
+        android:paddingStart="@dimen/small_padding"
+        android:paddingEnd="@dimen/small_padding"
+        tools:text="LastUpdateTime: " />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Wrapper"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/xlarge_margin" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        style="@style/Container"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/recyclerview_item_stock" />
+
+</LinearLayout>

@@ -39,7 +39,7 @@ dependencies {
     api "androidx.navigation:navigation-ui-ktx:$navigation_version"
     api "androidx.navigation:navigation-fragment-ktx:$navigation_version"
     api "com.google.android.material:material:$material_version"
-    testImplementation "junit:junit:$junit_version"
-    androidTestImplementation "androidx.test.ext:junit:$junit_ext_version"
+    api "junit:junit:$junit_version"
+    api "androidx.test.ext:junit:$junit_ext_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
 }

@@ -6,52 +6,84 @@
     android:padding="@dimen/medium_padding"
     tools:context=".FlowActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/compare"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/title_compare_flow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/example1"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/title_example1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/compare" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/example2"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/title_example2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/example1" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/example3"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/title_example3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/example2" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/example4"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/title_example4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/example3" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/example5"
-        style="@style/FullWidth"
+        style="@style/NormalButton"
         android:text="@string/title_example5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/example4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stock_app"
+        style="@style/AppButton"
+        android:text="@string/title_stock_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/example5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stock_app_2"
+        style="@style/AppButton"
+        android:text="@string/title_stock_app_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stock_app" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stock_app_3"
+        style="@style/AppButton"
+        android:text="@string/title_stock_app_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stock_app_2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/stock_app_4"
+        style="@style/AppButton"
+        android:text="@string/title_stock_app_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stock_app_3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

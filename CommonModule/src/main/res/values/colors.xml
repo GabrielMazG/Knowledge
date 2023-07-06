@@ -12,4 +12,8 @@
     <color name="colorPrimaryDark">#232F34</color>
     <color name="colorSecondary">#F9AA33</color>
     <color name="colorSecondaryLight">#AB8B67</color>
+
+    <color name="button_pressed">#ff8a00</color>
+    <color name="button_focused">#ff8a00</color>
+    <color name="button_default">#1c76bb</color>
 </resources>
