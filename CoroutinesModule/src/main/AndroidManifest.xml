@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:name=".CoroutineUsecasesOnAndroidApplication"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Knowledge">
+
+        <activity android:name=".base.UseCaseActivity" />
+
+        <activity
+            android:name=".usecases.usecase1.PerformSingleNetworkRequestActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase2.Perform2SequentialNetworkRequestsActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase2.callbacks.SequentialNetworkRequestsCallbacksActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase2.rx.SequentialNetworkRequestsRxActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase3.PerformNetworkRequestsConcurrentlyActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase4.VariableAmountOfNetworkRequestsActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase5.NetworkRequestWithTimeoutActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase6.RetryNetworkRequestActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase7.TimeoutAndRetryActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase7.callbacks.TimeoutAndRetryCallbackActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase7.rx.TimeoutAndRetryRxActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase8.RoomAndCoroutinesActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase9.DebuggingCoroutinesActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase10.CalculationInBackgroundActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase11.CooperativeCancellationActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase12.CalculationInSeveralCoroutinesActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase13.ExceptionHandlingActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase14.ContinueCoroutineWhenUserLeavesScreenActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase15.WorkManagerActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase16.PerformanceAnalysisActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".usecases.usecase17.PerformCalculationOnMainThreadActivity"
+            android:exported="true" />
+
+    </application>
+
+</manifest>

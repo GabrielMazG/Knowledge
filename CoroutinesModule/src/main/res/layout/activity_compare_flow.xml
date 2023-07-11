@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Container"
+    tools:context="com.example.flowmodule.compare.FlowCompareActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/FullWidth"
+        android:padding="@dimen/medium_padding">
+
+        <TextView
+            android:id="@+id/liveDataTitle"
+            style="@style/Wrapper"
+            android:text="@string/default_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/liveData"
+            style="@style/NormalButton"
+            android:text="@string/live_data"
+            app:layout_constraintEnd_toEndOf="@id/liveDataTitle"
+            app:layout_constraintStart_toStartOf="@id/liveDataTitle"
+            app:layout_constraintTop_toBottomOf="@id/liveDataTitle" />
+
+        <TextView
+            android:id="@+id/stateFlowTitle"
+            style="@style/Wrapper"
+            android:layout_marginTop="@dimen/xlarge_margin"
+            android:text="@string/default_name"
+            app:layout_constraintEnd_toEndOf="@id/liveData"
+            app:layout_constraintStart_toStartOf="@id/liveData"
+            app:layout_constraintTop_toBottomOf="@id/liveData" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/stateFlow"
+            style="@style/NormalButton"
+            android:text="@string/state_flow"
+            app:layout_constraintEnd_toEndOf="@id/stateFlowTitle"
+            app:layout_constraintStart_toStartOf="@id/stateFlowTitle"
+            app:layout_constraintTop_toBottomOf="@id/stateFlowTitle" />
+
+        <TextView
+            android:id="@+id/flowTitle"
+            style="@style/Wrapper"
+            android:layout_marginTop="@dimen/xlarge_margin"
+            android:text="@string/default_name"
+            app:layout_constraintEnd_toEndOf="@id/stateFlow"
+            app:layout_constraintStart_toStartOf="@id/stateFlow"
+            app:layout_constraintTop_toBottomOf="@id/stateFlow" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/flow"
+            style="@style/NormalButton"
+            android:text="@string/flow"
+            app:layout_constraintEnd_toEndOf="@id/flowTitle"
+            app:layout_constraintStart_toStartOf="@id/flowTitle"
+            app:layout_constraintTop_toBottomOf="@id/flowTitle" />
+
+        <TextView
+            android:id="@+id/sharedFlowTitle"
+            style="@style/Wrapper"
+            android:layout_marginTop="@dimen/xlarge_margin"
+            android:text="@string/default_name"
+            app:layout_constraintEnd_toEndOf="@id/flow"
+            app:layout_constraintStart_toStartOf="@id/flow"
+            app:layout_constraintTop_toBottomOf="@id/flow" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sharedFlow"
+            style="@style/NormalButton"
+            android:text="@string/shared_flow"
+            app:layout_constraintEnd_toEndOf="@id/sharedFlowTitle"
+            app:layout_constraintStart_toStartOf="@id/sharedFlowTitle"
+            app:layout_constraintTop_toBottomOf="@id/sharedFlowTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Container"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        style="@style/Container"
+        android:orientation="vertical"
+        android:padding="@dimen/medium_padding">
+
+        <LinearLayout
+            style="@style/FullWidth"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Wrapper"
+                android:layout_marginEnd="16dp"
+                android:text="@string/factorial_of"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/body1" />
+
+            <EditText
+                android:id="@+id/editTextFactorialOf"
+                style="@style/Wrapper"
+                android:layout_width="100dp"
+                android:inputType="numberDecimal"
+                android:text="50000" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCalculateWithDefaultDispatcher"
+            style="@style/NormalButton"
+            android:text="Calculate with Default Dispatcher" />
+
+        <Button
+            android:id="@+id/btnCalculateOnMain"
+            style="@style/NormalButton"
+
+            android:text="Calculate on Main Thread" />
+
+        <Button
+            android:id="@+id/btnCalculateOnMainUsingYield"
+            style="@style/NormalButton"
+            android:text="Calculate on Main Thread - Non Blocking" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Wrapper"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/xlarge_margin"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/textViewCalculationDuration"
+            style="@style/Wrapper" />
+
+    </LinearLayout>
+
+</LinearLayout>

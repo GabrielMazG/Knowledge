@@ -7,43 +7,51 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/navigationComponents"
+        android:id="@+id/compose"
         style="@style/NormalButton"
-        android:text="@string/navigation_components_title"
+        android:text="@string/compose_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/flows"
+        android:id="@+id/coroutines"
         style="@style/NormalButton"
-        android:text="@string/flows_title"
-        app:layout_constraintEnd_toEndOf="@id/navigationComponents"
-        app:layout_constraintStart_toStartOf="@id/navigationComponents"
-        app:layout_constraintTop_toBottomOf="@id/navigationComponents" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/graphQL"
-        style="@style/NormalButton"
-        android:text="@string/graphql_title"
-        app:layout_constraintEnd_toEndOf="@id/navigationComponents"
-        app:layout_constraintStart_toStartOf="@id/navigationComponents"
-        app:layout_constraintTop_toBottomOf="@id/flows" />
+        android:text="@string/coroutines_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/compose" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/errorHandling"
         style="@style/NormalButton"
         android:text="@string/error_handling_title"
-        app:layout_constraintEnd_toEndOf="@id/navigationComponents"
-        app:layout_constraintStart_toStartOf="@id/navigationComponents"
-        app:layout_constraintTop_toBottomOf="@id/graphQL" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coroutines" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/compose"
+        android:id="@+id/flows"
         style="@style/NormalButton"
-        android:text="@string/compose_title"
-        app:layout_constraintEnd_toEndOf="@id/navigationComponents"
-        app:layout_constraintStart_toStartOf="@id/navigationComponents"
+        android:text="@string/flows_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/errorHandling" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/graphQL"
+        style="@style/NormalButton"
+        android:text="@string/graphql_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flows" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/navigationComponents"
+        style="@style/NormalButton"
+        android:text="@string/navigation_components_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/graphQL" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

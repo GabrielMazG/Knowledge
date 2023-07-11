@@ -28,6 +28,7 @@
         <activity android:name="com.example.flowmodule.compare.FlowCompareActivity" />
         <activity android:name="com.example.graphqlmodule.GraphQLMainActivity" />
         <activity android:name="com.example.errorhandlermodule.ErrorHandlingMainActivity" />
+        <activity android:name="com.example.coroutines.CoroutinesActivity" />
     </application>
 
 </manifest>

@@ -6,6 +6,7 @@ import com.example.flowmodule.FlowActivity.Companion.TAG
 import com.example.flowmodule.base.BaseViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onStart
@@ -43,6 +44,19 @@ class FlowUseCase4ViewModel(
             Log.d(TAG, ": Flow has completed.")
         }
         .stateIn(
+            scope = viewModelScope,
+            initialValue = UiState.Loading,
+            started = SharingStarted.WhileSubscribed(stopTimeoutMillis = 5000)
+        )
+
+    val currentStockPriceAsFlow: StateFlow<UiState> = stockPriceDataSource
+        .latestStockList
+        .map { stockList ->
+            UiState.Success(stockList) as UiState
+        }
+        .onCompletion {
+            Log.d(TAG, "Flow has completed.")
+        }.stateIn(
             scope = viewModelScope,
             initialValue = UiState.Loading,
             started = SharingStarted.WhileSubscribed(stopTimeoutMillis = 5000)

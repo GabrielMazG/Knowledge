@@ -39,6 +39,7 @@ dependencies {
 
     implementation project(":CommonModule")
     implementation project(":ComposeModule")
+    implementation project(":CoroutinesModule")
     implementation project(":ErrorHandlerModule")
     implementation project(":FlowModule")
     implementation project(":GraphQLModule")

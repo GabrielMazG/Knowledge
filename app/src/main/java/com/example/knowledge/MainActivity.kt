@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.composemodule.ComposeActivity
+import com.example.coroutines.CoroutinesActivity
 import com.example.errorhandlermodule.ErrorHandlingMainActivity
 import com.example.flowmodule.FlowActivity
 import com.example.graphqlmodule.GraphQLMainActivity
@@ -44,6 +45,9 @@ class MainActivity : AppCompatActivity() {
 
             compose.setOnClickListener {
                 startActivity(Intent(this@MainActivity, ComposeActivity::class.java))
+            }
+            coroutines.setOnClickListener {
+                startActivity(Intent(this@MainActivity, CoroutinesActivity::class.java))
             }
         }
     }

@@ -42,6 +42,24 @@ buildscript {
         // Retrofit
         retrofit_version = '2.9.0'
         retrofit_rxadapter_version = '2.7.1'
+        retrofit_mock_version = '2.7.1'
+
+        // RX
+        rx_android_version = '2.1.1'
+        rx_java_version = '2.2.19'
+        rx_kotlin_version = '2.4.0'
+
+        // Coroutines
+        coroutines_version = '1.6.3'
+
+        // Room
+        room_version = '2.5.2'
+
+        // Work Manager
+        work_manager_version = '2.8.1'
+
+        // Testing
+        core_testing_version = '2.2.0'
     }
 }
 
