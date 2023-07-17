@@ -8,6 +8,7 @@ buildscript {
         constraint_layout_version = '2.1.4'
         navigation_version = '2.5.3'
         lifecycle_version = '2.6.1'
+        androidx_test_version = '1.5.2'
 
         // Testing
         junit_version = '4.13.2'
@@ -43,6 +44,7 @@ buildscript {
         retrofit_version = '2.9.0'
         retrofit_rxadapter_version = '2.7.1'
         retrofit_mock_version = '2.7.1'
+        retrofit_gson_version = '2.9.0'
 
         // RX
         rx_android_version = '2.1.1'
@@ -51,6 +53,7 @@ buildscript {
 
         // Coroutines
         coroutines_version = '1.6.3'
+        lifecycle_viewmodel_version = '2.5.1'
 
         // Room
         room_version = '2.5.2'
@@ -60,6 +63,15 @@ buildscript {
 
         // Testing
         core_testing_version = '2.2.0'
+
+        // Gson
+        gson_version = '2.9.0'
+
+        // Arch
+        arch_version = '2.1.0'
+
+        // Truth
+        truth_version = '1.1.3'
     }
 }
 

@@ -1,0 +1,9 @@
+<resources>
+    <string name="title_flow_activity_main">FlowMainActivity</string>
+
+    <!--  Titles  -->
+    <string name="app_name">Coroutines Codelab</string>
+
+    <string name="click_to_start">Click to start</string>
+
+</resources>

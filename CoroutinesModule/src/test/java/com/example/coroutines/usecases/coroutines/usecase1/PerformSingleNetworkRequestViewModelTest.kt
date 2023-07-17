@@ -4,7 +4,7 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.coroutines.mock.mockAndroidVersions
 import com.example.coroutines.usecases.usecase1.PerformSingleNetworkRequestViewModel
 import com.example.coroutines.usecases.usecase1.UiState
-import com.lukaslechner.coroutineusecasesonandroid.utils.ReplaceMainDispatcherRule
+import com.example.coroutines.utils.ReplaceMainDispatcherRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals

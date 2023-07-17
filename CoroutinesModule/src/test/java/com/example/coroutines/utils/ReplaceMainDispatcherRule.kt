@@ -1,4 +1,4 @@
-package com.lukaslechner.coroutineusecasesonandroid.utils
+package com.example.coroutines.utils
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

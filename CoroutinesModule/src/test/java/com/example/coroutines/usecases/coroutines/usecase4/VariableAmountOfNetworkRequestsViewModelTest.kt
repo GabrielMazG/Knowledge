@@ -6,7 +6,7 @@ import com.example.coroutines.mock.mockVersionFeaturesOreo
 import com.example.coroutines.mock.mockVersionFeaturesPie
 import com.example.coroutines.usecases.usecase4.UiState
 import com.example.coroutines.usecases.usecase4.VariableAmountOfNetworkRequestsViewModel
-import com.lukaslechner.coroutineusecasesonandroid.utils.ReplaceMainDispatcherRule
+import com.example.coroutines.utils.ReplaceMainDispatcherRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.currentTime

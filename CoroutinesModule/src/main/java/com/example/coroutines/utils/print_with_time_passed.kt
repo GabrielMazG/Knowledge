@@ -1,4 +1,4 @@
-package com.lukaslechner.coroutineusecasesonandroid.playground.utils
+package com.example.coroutines.utils
 
 fun printWithTimePassed(message: Any?, startTime: Long) {
     val timePassed = System.currentTimeMillis() - startTime

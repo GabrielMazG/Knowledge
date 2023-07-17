@@ -3,7 +3,7 @@ package com.example.coroutines.usecases.coroutines.usecase10
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.coroutines.usecases.usecase10.CalculationInBackgroundViewModel
 import com.example.coroutines.usecases.usecase10.UiState
-import com.lukaslechner.coroutineusecasesonandroid.utils.ReplaceMainDispatcherRule
+import com.example.coroutines.utils.ReplaceMainDispatcherRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runCurrent

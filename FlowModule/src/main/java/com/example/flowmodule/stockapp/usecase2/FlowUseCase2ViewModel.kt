@@ -7,6 +7,7 @@ import com.example.flowmodule.base.BaseViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.cancellable
 import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.flatMap
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.onStart

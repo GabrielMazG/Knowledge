@@ -23,12 +23,20 @@
         app:layout_constraintTop_toBottomOf="@id/compose" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/coroutinesCodelab"
+        style="@style/NormalButton"
+        android:text="@string/coroutines_codelab_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/coroutines" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/errorHandling"
         style="@style/NormalButton"
         android:text="@string/error_handling_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/coroutines" />
+        app:layout_constraintTop_toBottomOf="@id/coroutinesCodelab" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/flows"

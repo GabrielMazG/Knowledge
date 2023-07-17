@@ -9,6 +9,7 @@
     <string name="error_handling_title">Error handling</string>
     <string name="compose_title">Compose</string>
     <string name="coroutines_title">Coroutines</string>
+    <string name="coroutines_codelab_title">Coroutines Codelab</string>
 
     <string name="next">Next</string>
     <string name="previous">Previous</string>
