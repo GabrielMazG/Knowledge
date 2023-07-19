@@ -5,6 +5,7 @@
     <!--  Titles  -->
     <string name="navigation_components_title">Navigation Components</string>
     <string name="flows_title">Flows</string>
+    <string name="flows_codelab_title">Flows Codelab</string>
     <string name="graphql_title">GraphQL</string>
     <string name="error_handling_title">Error handling</string>
     <string name="compose_title">Compose</string>

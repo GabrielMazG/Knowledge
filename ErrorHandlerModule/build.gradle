@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.example.errorhandlermodule'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         minSdk 21
@@ -34,4 +34,5 @@ android {
 
 dependencies {
     implementation project(":CommonModule")
+    implementation 'androidx.core:core-ktx:+'
 }

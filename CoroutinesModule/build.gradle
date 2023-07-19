@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.example.coroutines'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         minSdk 21
@@ -53,4 +53,5 @@ dependencies {
     api "androidx.work:work-runtime-ktx:$work_manager_version"
     api "androidx.arch.core:core-testing:$core_testing_version"
     api "com.squareup.retrofit2:retrofit-mock:$retrofit_mock_version"
+    implementation 'androidx.core:core-ktx:+'
 }

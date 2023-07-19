@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace 'com.example.flowmodule'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         minSdk 21
@@ -43,6 +43,7 @@ dependencies {
     implementation "com.google.code.gson:gson:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    implementation 'androidx.core:core-ktx:+'
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
     testImplementation "androidx.arch.core:core-testing:$core_testing_version"
     testImplementation "com.squareup.retrofit2:retrofit-mock:$retrofit_mock_version"

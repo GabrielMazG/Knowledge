@@ -7,6 +7,7 @@ import com.example.composemodule.ComposeActivity
 import com.example.coroutines.CoroutinesActivity
 import com.example.coroutinescodelabmodule.main.CoroutinesCodelabActivity
 import com.example.errorhandlermodule.ErrorHandlingMainActivity
+import com.example.flowcodelabmodule.ui.FlowCodelabActivity
 import com.example.flowmodule.FlowActivity
 import com.example.graphqlmodule.GraphQLMainActivity
 import com.example.knowledge.databinding.ActivityMainBinding
@@ -36,6 +37,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this@MainActivity, FlowActivity::class.java))
             }
 
+            flowsCodelab.setOnClickListener {
+                startActivity(Intent(this@MainActivity, FlowCodelabActivity::class.java))
+            }
+
             graphQL.setOnClickListener {
                 startActivity(Intent(this@MainActivity, GraphQLMainActivity::class.java))
             }
@@ -47,9 +52,11 @@ class MainActivity : AppCompatActivity() {
             compose.setOnClickListener {
                 startActivity(Intent(this@MainActivity, ComposeActivity::class.java))
             }
+
             coroutines.setOnClickListener {
                 startActivity(Intent(this@MainActivity, CoroutinesActivity::class.java))
             }
+
             coroutinesCodelab.setOnClickListener {
                 startActivity(Intent(this@MainActivity, CoroutinesCodelabActivity::class.java))
             }

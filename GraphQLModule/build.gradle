@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace 'com.example.graphqlmodule'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         minSdk 21
@@ -40,6 +40,7 @@ dependencies {
     implementation "androidx.security:security-crypto:$crypto_version"
     implementation "com.apollographql.apollo3:apollo-runtime:$apollo_version"
     implementation "io.coil-kt:coil:$koil_version"
+    implementation 'androidx.core:core-ktx:+'
 }
 
 apollo {

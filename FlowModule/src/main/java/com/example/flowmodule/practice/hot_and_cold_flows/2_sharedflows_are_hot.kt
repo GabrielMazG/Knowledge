@@ -21,13 +21,13 @@ fun main() {
     }
 
     scope.launch {
-        sharedFlow.collect{
+        sharedFlow.collect {
             println("Collected $it in collector 1")
         }
     }
 
     scope.launch {
-        sharedFlow.collect{
+        sharedFlow.collect {
             println("Collected $it in collector 2")
         }
     }
