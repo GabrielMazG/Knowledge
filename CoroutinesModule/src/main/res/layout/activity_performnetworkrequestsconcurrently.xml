@@ -44,7 +44,7 @@
             <TextView
                 android:id="@+id/textViewResult"
                 style="@style/FullWidth"
-                android:textColor="@color/colorPrimary"
+                android:textColor="@color/colorSecondary"
                 android:textSize="16sp" />
 
         </ScrollView>

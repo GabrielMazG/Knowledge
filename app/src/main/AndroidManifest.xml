@@ -10,7 +10,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_app"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_app"
+        android:roundIcon="@mipmap/ic_app_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Knowledge"
         tools:targetApi="31">
@@ -24,14 +24,58 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.navigationcomponentmodule.NavigationComponentMainActivity" />
-        <activity android:name="com.example.flowmodule.compare.FlowCompareActivity" />
-        <activity android:name="com.example.graphqlmodule.GraphQLMainActivity" />
-        <activity android:name="com.example.errorhandlermodule.ErrorHandlingMainActivity" />
+        <!--  Coroutines  -->
         <activity android:name="com.example.coroutines.CoroutinesActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase1.PerformSingleNetworkRequestActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase2.Perform2SequentialNetworkRequestsActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase2.callbacks.SequentialNetworkRequestsCallbacksActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase2.rx.SequentialNetworkRequestsRxActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase3.PerformNetworkRequestsConcurrentlyActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase4.VariableAmountOfNetworkRequestsActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase5.NetworkRequestWithTimeoutActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase6.RetryNetworkRequestActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase7.TimeoutAndRetryActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase7.callbacks.TimeoutAndRetryCallbackActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase7.rx.TimeoutAndRetryRxActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase8.RoomAndCoroutinesActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase9.DebuggingCoroutinesActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase10.CalculationInBackgroundActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase11.CooperativeCancellationActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase12.CalculationInSeveralCoroutinesActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase13.ExceptionHandlingActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase14.ContinueCoroutineWhenUserLeavesScreenActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase15.WorkManagerActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase16.PerformanceAnalysisActivity" />
+        <activity android:name="com.example.coroutines.usecases.usecase17.PerformCalculationOnMainThreadActivity" />
+
+        <!--  Coroutines Codelab  -->
         <activity android:name="com.example.coroutinescodelabmodule.main.CoroutinesCodelabActivity" />
-        <activity android:name="com.example.flowcodelabmodule.ui.FlowCodelabActivity" />
+
+        <!--  Error Handler  -->
+        <activity android:name="com.example.errorhandlermodule.ErrorHandlingMainActivity" />
+
+        <!--  Flow  -->
+        <activity android:name="com.example.flowmodule.compare.FlowCompareActivity" />
         <activity android:name="com.example.flowmodule.FlowActivity" />
+        <activity android:name="com.example.flowmodule.examples.FlowExample1Activity" />
+        <activity android:name="com.example.flowmodule.examples.FlowExample2Activity" />
+        <activity android:name="com.example.flowmodule.examples.FlowExample3Activity" />
+        <activity android:name="com.example.flowmodule.examples.FlowExample4Activity" />
+        <activity android:name="com.example.flowmodule.examples.FlowExample5Activity" />
+        <activity android:name="com.example.flowmodule.stockapp.usecase1.FlowUseCase1Activity" />
+        <activity android:name="com.example.flowmodule.stockapp.usecase2.FlowUseCase2Activity" />
+        <activity android:name="com.example.flowmodule.stockapp.usecase3.FlowUseCase3Activity" />
+        <activity android:name="com.example.flowmodule.stockapp.usecase4.FlowUseCase4Activity" />
+
+        <!--  Flow Codelab  -->
+        <activity android:name="com.example.flowcodelabmodule.ui.FlowCodelabActivity" />
+
+        <!--  GraphQL  -->
+        <activity android:name="com.example.graphqlmodule.GraphQLMainActivity" />
+
+        <!--  Navigation components  -->
+        <activity android:name="com.example.navigationcomponentmodule.NavigationComponentMainActivity" />
+
     </application>
 
 </manifest>
