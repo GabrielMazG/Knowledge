@@ -109,7 +109,7 @@ fun NoteScreen(
                 NoteRow(
                     note = note,
                     onNoteClicked = {
-                        onRemoveNote(note)
+                        onRemoveNote(it)
                     }
                 )
             }

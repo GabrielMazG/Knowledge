@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.annotation.RequiresApi
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.composemodule.jetnoteapp.data.NotesDataSource
@@ -24,7 +25,7 @@ class JetNoteActivity : ComponentActivity() {
             MyApp {
                 Surface(color = ColorPrimaryDark) {
                     val notes = remember {
-                        mutableListOf<Note>()
+                        mutableStateListOf<Note>()
                     }
                     NoteScreen(
                         notes = notes,
