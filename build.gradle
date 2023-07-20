@@ -23,7 +23,8 @@ buildscript {
         compose_version = '1.4.2'
         compose_bom_version = '2022.10.00'
         compose_activity_version = '1.7.2'
-        navigation_compose_version = "2.5.3"
+        navigation_compose_version = '2.6.0'
+        compose_lifecycle_viewmodel_version = '2.6.1'
 
         // Apollo
         apollo_version = '3.8.1'

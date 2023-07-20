@@ -4,7 +4,9 @@ import android.os.Build
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -35,6 +37,7 @@ import com.example.composemodule.jetnoteapp.components.NoteInputText
 import com.example.composemodule.jetnoteapp.data.NotesDataSource
 import com.example.composemodule.jetnoteapp.model.Note
 import com.example.composemodule.theme.ColorAccent
+import com.example.composemodule.theme.ColorPrimaryDark
 import com.example.composemodule.theme.ColorSecondaryLight
 import com.example.composemodule.theme.Typography
 import java.time.format.DateTimeFormatter
@@ -137,7 +140,7 @@ fun NoteRow(
 ) {
     Surface(
         modifier
-            .padding(4.dp)
+            .padding(8.dp)
             .clip(RoundedCornerShape(topEnd = 33.dp, bottomStart = 33.dp))
             .fillMaxWidth(),
         color = ColorAccent,
@@ -156,15 +159,23 @@ fun NoteRow(
                 style = Typography.subtitle2
             )
             Text(
-                modifier = modifier.padding(6.dp),
+                modifier = modifier.padding(vertical = 6.dp),
                 text = note.description,
-                style = Typography.subtitle1
+                style = Typography.subtitle1,
+                color = ColorSecondaryLight
             )
-            Text(
-                modifier = modifier.padding(6.dp),
-                text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM")),
-                style = Typography.caption
-            )
+            Row(
+                horizontalArrangement = Arrangement.End,
+                modifier = modifier
+                    .padding(6.dp)
+                    .fillMaxWidth(),
+            ) {
+                Text(
+                    text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM")),
+                    style = Typography.caption,
+                    color = ColorPrimaryDark,
+                )
+            }
         }
     }
 }
