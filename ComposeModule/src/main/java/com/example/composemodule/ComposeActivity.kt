@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.composemodule.databinding.ActivityComposeBinding
 import com.example.composemodule.jetnoteapp.JetNoteActivity
 import com.example.composemodule.jettip.JetTipActivity
+import com.example.composemodule.jettriviaapp.JetTriviaActivity
 import com.example.composemodule.movieapp.MovieAppActivity
 import com.example.composemodule.profile.ProfileActivity
 
@@ -31,6 +32,9 @@ class ComposeActivity : AppCompatActivity() {
             }
             jetnoteapp.setOnClickListener {
                 startActivity(Intent(this@ComposeActivity, JetNoteActivity::class.java))
+            }
+            jettriviaapp.setOnClickListener {
+                startActivity(Intent(this@ComposeActivity, JetTriviaActivity::class.java))
             }
         }
     }

@@ -38,4 +38,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/movieapp" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/jettriviaapp"
+        style="@style/NormalButton"
+        android:text="@string/title_jettrivia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jetnoteapp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

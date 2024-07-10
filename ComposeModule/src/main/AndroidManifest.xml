@@ -25,6 +25,11 @@
             android:exported="false"
             android:label="@string/title_jetnoteapp"
             android:theme="@style/Theme.Knowledge" />
+        <activity
+            android:name=".jettriviaapp.JetTriviaActivity"
+            android:exported="false"
+            android:label="@string/title_jettrivia"
+            android:theme="@style/Theme.Knowledge" />
     </application>
 
 </manifest>
