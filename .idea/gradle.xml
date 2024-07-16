@@ -10,7 +10,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/CommonModule" />
-            <option value="$PROJECT_DIR$/ComposeModule" />
             <option value="$PROJECT_DIR$/CoroutinesCodelabModule" />
             <option value="$PROJECT_DIR$/CoroutinesModule" />
             <option value="$PROJECT_DIR$/ErrorHandlerModule" />

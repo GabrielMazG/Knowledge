@@ -18,6 +18,7 @@ package com.example.coroutinescodelabmodule.util
 
 import com.google.gson.Gson
 import okhttp3.*
+import okhttp3.MediaType.Companion.toMediaType
 
 /**
  * A list of fake results to return.
@@ -80,7 +81,7 @@ class SkipNetworkInterceptor: Interceptor {
                 .protocol(Protocol.HTTP_1_1)
                 .message("Bad server day")
                 .body(ResponseBody.create(
-                        MediaType.get("application/json"),
+                    "application/json".toMediaType(),
                         gson.toJson(mapOf("cause" to "not sure"))))
                 .build()
     }
@@ -107,7 +108,7 @@ class SkipNetworkInterceptor: Interceptor {
                 .protocol(Protocol.HTTP_1_1)
                 .message("OK")
                 .body(ResponseBody.create(
-                        MediaType.get("application/json"),
+                        "application/json".toMediaType(),
                         gson.toJson(nextResult)))
                 .build()
     }

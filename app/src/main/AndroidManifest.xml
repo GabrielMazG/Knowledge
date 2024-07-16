@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".compose.ComposeApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -75,6 +76,35 @@
 
         <!--  Navigation components  -->
         <activity android:name="com.example.navigationcomponentmodule.NavigationComponentMainActivity" />
+
+        <activity
+            android:name="com.example.knowledge.compose.movieapp.MovieAppActivity"
+            android:exported="false"
+            android:label="@string/title_movieapp"
+            android:theme="@style/Theme.Knowledge" />
+        <activity
+            android:name="com.example.knowledge.compose.ComposeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.knowledge.compose.profile.ProfileActivity"
+            android:exported="false"
+            android:label="@string/title_activity_profile"
+            android:theme="@style/Theme.Knowledge" />
+        <activity
+            android:name="com.example.knowledge.compose.jettip.JetTipActivity"
+            android:exported="false"
+            android:label="@string/title_activity_jet_tip"
+            android:theme="@style/Theme.Knowledge" />
+        <activity
+            android:name="com.example.knowledge.compose.jetnoteapp.JetNoteActivity"
+            android:exported="false"
+            android:label="@string/title_jetnoteapp"
+            android:theme="@style/Theme.Knowledge" />
+        <activity
+            android:name="com.example.knowledge.compose.jettriviaapp.screens.JetTriviaActivity"
+            android:exported="false"
+            android:label="@string/title_jettrivia"
+            android:theme="@style/Theme.Knowledge" />
 
     </application>
 

@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.library'
+    id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
 }
@@ -12,16 +12,32 @@ android {
         minSdk 21
         targetSdk 33
 
-        consumerProguardFiles "consumer-rules.pro"
-        vectorDrawables {
-            useSupportLibrary true
-        }
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            // Enables code shrinking, obfuscation, and optimization for only
+            // your project's release build type. Make sure to use a build
+            // variant with `debuggable false`.
+            minifyEnabled true
+
+            // Enables resource shrinking, which is performed by the
+            // Android Gradle plugin.
+            shrinkResources true
+
+            // Includes the default ProGuard rules files that are packaged with
+            // the Android Gradle plugin. To learn more, go to the section about
+            // R8 configuration files.
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+    }
+    flavorDimensions "nombre-dimension"
+    productFlavors {
+        flavor2 {
+            dimension "nombre-dimension"
+            proguardFile 'flavor2-rules.pro'
         }
     }
     compileOptions {
@@ -91,3 +107,5 @@ dependencies {
     // Images
     implementation "io.coil-kt:coil-compose:$koil_version"
 }
+
+apply plugin: 'dagger.hilt.android.plugin'

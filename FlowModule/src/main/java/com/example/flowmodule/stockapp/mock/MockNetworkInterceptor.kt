@@ -1,6 +1,7 @@
 package com.example.flowmodule.stockapp.mock
 
 import okhttp3.*
+import okhttp3.MediaType.Companion.toMediaType
 import kotlin.random.Random
 
 class MockNetworkInterceptor : Interceptor {
@@ -11,7 +12,7 @@ class MockNetworkInterceptor : Interceptor {
         val request = chain.request()
 
         val mockResponse = findMockResponseInList(request)
-            ?: throw RuntimeException("No mock response found for url ${request.url()}. Please define a mock response in your MockApi!")
+            ?: throw RuntimeException("No mock response found for url ${request.url}. Please define a mock response in your MockApi!")
 
         removeResponseIfItShouldNotBePersisted(mockResponse)
         simulateNetworkDelay(mockResponse)
@@ -38,7 +39,7 @@ class MockNetworkInterceptor : Interceptor {
 
     private fun findMockResponseInList(request: Request): MockResponse? {
         return mockResponses.find { mockResponse ->
-            mockResponse.path.contains(request.url().encodedPath())
+            mockResponse.path.contains(request.url.encodedPath)
         }
     }
 
@@ -60,7 +61,7 @@ class MockNetworkInterceptor : Interceptor {
             .message("Internal Server Error: $errorBody")
             .body(
                 ResponseBody.create(
-                    MediaType.get("text/plain"),
+                    "text/plain".toMediaType(),
                     errorBody
                 )
             )
@@ -78,7 +79,7 @@ class MockNetworkInterceptor : Interceptor {
             .message("OK")
             .body(
                 ResponseBody.create(
-                    MediaType.get("application/json"),
+                    "application/json".toMediaType(),
                     mockResponse.body.invoke()
                 )
             )

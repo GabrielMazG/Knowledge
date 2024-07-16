@@ -1,5 +1,7 @@
 <resources>
 
+    <string name="app_name">Coroutines</string>
+
     <!--  Profile  -->
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_profile">Profile</string>
