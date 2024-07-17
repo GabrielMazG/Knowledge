@@ -12,7 +12,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class QuestionsViewModel @Inject constructor(private val repository: QuestionRepository): ViewModel() {
+class QuestionsViewModel @Inject constructor(private val repository: QuestionRepository) :
+    ViewModel() {
 
     val data: MutableState<DataOrException<ArrayList<QuestionItem>, Boolean, Exception>> =
         mutableStateOf(DataOrException(null, true, Exception("")))
@@ -24,8 +25,13 @@ class QuestionsViewModel @Inject constructor(private val repository: QuestionRep
     private fun getAllQuestions() {
         viewModelScope.launch {
             data.value.loading = true
-            data.value = repository.getAllQuestions()
-            if (data.value.data.toString().isNotEmpty()) data.value.loading = false
+            val result = repository.getAllQuestions()
+            result.data = result.data?.take(20) as ArrayList<QuestionItem>?
+            data.value = result
+            if (data.value.data.toString().isNotEmpty())
+                data.value.loading = false
         }
     }
+
+    fun getTotalQuestionCount(): Int = data.value.data?.toMutableList()?.size ?: 0
 }
