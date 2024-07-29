@@ -23,4 +23,7 @@ object AppColors {
     val ColorPrimaryDark = Color(0xFF232F34)
     val ColorSecondary = Color(0xFFF9AA33)
     val ColorSecondaryLight = Color(0xFFAB8B67)
+
+    // Weather Forecast
+    val WeatherBackground = Color(0xFFFFC400)
 }
