@@ -79,6 +79,7 @@ buildscript {
 
         // Hilt
         hilt_version = '2.51.1'
+        hilt_navigation_version = '1.2.0'
     }
 
     dependencies {

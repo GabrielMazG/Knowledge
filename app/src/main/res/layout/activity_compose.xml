@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/jettip"
+        android:id="@+id/jet_tip"
         style="@style/NormalButton"
         android:text="@string/title_jet_tip"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,27 +23,35 @@
         app:layout_constraintTop_toBottomOf="@id/profile" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/movieapp"
+        android:id="@+id/movie_app"
         style="@style/NormalButton"
         android:text="@string/title_movieapp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/jettip" />
+        app:layout_constraintTop_toBottomOf="@id/jet_tip" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/jetnoteapp"
+        android:id="@+id/jet_note_app"
         style="@style/NormalButton"
         android:text="@string/title_jetnoteapp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/movieapp" />
+        app:layout_constraintTop_toBottomOf="@id/movie_app" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/jettriviaapp"
+        android:id="@+id/jet_trivia_app"
         style="@style/NormalButton"
         android:text="@string/title_jettrivia"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/jetnoteapp" />
+        app:layout_constraintTop_toBottomOf="@id/jet_note_app" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/jet_weather_forecast_app"
+        style="@style/NormalButton"
+        android:text="@string/title_jetweatherforecast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jet_trivia_app" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -44,9 +44,9 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.knowledge.compose.Logger
 import com.example.knowledge.compose.jettriviaapp.model.QuestionItem
 import com.example.knowledge.compose.jettriviaapp.util.AppColors
-import com.example.knowledge.compose.jettriviaapp.util.Logger
 
 @Composable
 fun Questions(viewModel: QuestionsViewModel) {
@@ -56,7 +56,7 @@ fun Questions(viewModel: QuestionsViewModel) {
     }
     if (viewModel.data.value.loading == true) {
         CircularProgressIndicator()
-        Logger.log("Loading", "Questions: ...Loading...")
+        Logger.log(title = "Loading", message = "Questions: ...Loading...")
     } else {
         val question = try {
             questions?.get(questionIndex.intValue)
@@ -69,7 +69,7 @@ fun Questions(viewModel: QuestionsViewModel) {
             }
         }
     }
-    Logger.log("SIZE", "Questions: ${questions?.size}")
+    Logger.log(title = "SIZE", message = "Questions: ${questions?.size}")
 }
 
 //@Preview
@@ -171,10 +171,10 @@ fun QuestionDisplay(
                                 style = SpanStyle(
                                     fontWeight = FontWeight.Light,
                                     color = if (correctAnswerState.value == true && index == answerState.value) {
-                                        Logger.log("Answer", "Correct")
+                                        Logger.log(title = "Answer", message = "Correct")
                                         Color.Green
                                     } else if (correctAnswerState.value == false && index == answerState.value) {
-                                        Logger.log("Answer", "Wrong")
+                                        Logger.log(title = "Answer", message = "Wrong")
                                         Color.Red
                                     } else {
                                         Color.White

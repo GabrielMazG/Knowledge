@@ -105,7 +105,11 @@
             android:exported="false"
             android:label="@string/title_jettrivia"
             android:theme="@style/Theme.Knowledge" />
-
+        <activity
+            android:name=".compose.jetweatherforecast.screens.JetWeatherForecastActivity"
+            android:exported="false"
+            android:label="@string/title_jetweatherforecast"
+            android:theme="@style/Theme.Knowledge" />
     </application>
 
 </manifest>
