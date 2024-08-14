@@ -7,9 +7,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.knowledge.compose.jetweatherforecast.screens.about.AboutScreen
+import com.example.knowledge.compose.jetweatherforecast.screens.favorites.FavoritesScreen
 import com.example.knowledge.compose.jetweatherforecast.screens.main.MainScreen
 import com.example.knowledge.compose.jetweatherforecast.screens.main.MainViewModel
 import com.example.knowledge.compose.jetweatherforecast.screens.search.SearchScreen
+import com.example.knowledge.compose.jetweatherforecast.screens.settings.SettingsScreen
 import com.example.knowledge.compose.jetweatherforecast.screens.splash.SplashScreen
 
 @Composable
@@ -45,6 +48,18 @@ fun WeatherNavigation() {
 
         composable(WeatherScreens.SearchScreen.name) {
             SearchScreen(navController = navController)
+        }
+
+        composable(WeatherScreens.AboutScreen.name) {
+            AboutScreen(navController = navController)
+        }
+
+        composable(WeatherScreens.FavoriteScreen.name) {
+            FavoritesScreen(navController = navController)
+        }
+
+        composable(WeatherScreens.SettingsScreen.name) {
+            SettingsScreen(navController = navController)
         }
     }
 }
