@@ -31,6 +31,7 @@ import androidx.navigation.NavController
 import com.example.knowledge.compose.Logger
 import com.example.knowledge.compose.jetweatherforecast.data.DataOrException
 import com.example.knowledge.compose.jetweatherforecast.model.Weather
+import com.example.knowledge.compose.jetweatherforecast.navigation.WeatherScreens
 import com.example.knowledge.compose.jetweatherforecast.utils.AppColors.ColorAccent
 import com.example.knowledge.compose.jetweatherforecast.utils.AppColors.ColorPrimary
 import com.example.knowledge.compose.jetweatherforecast.utils.AppColors.ColorPrimaryDark
@@ -47,11 +48,16 @@ import com.example.knowledge.compose.jetweatherforecast.widgets.WeatherStateImag
 import com.example.knowledge.compose.theme.ColorSecondaryLight
 
 @Composable
-fun MainScreen(navController: NavController, mainViewmodel: MainViewModel = hiltViewModel()) {
+fun MainScreen(
+    navController: NavController,
+    mainViewmodel: MainViewModel = hiltViewModel(),
+    city: String?
+) {
+    Logger.log(title = "Main Screen", message = city.toString())
     val weatherData = produceState<DataOrException<Weather, Boolean, Exception>>(
         initialValue = DataOrException(loading = true)
     ) {
-        value = mainViewmodel.getWeatherData("Malaga")
+        value = mainViewmodel.getWeatherData(city.toString())
     }.value
     if (weatherData.loading == true) {
         CircularProgressIndicator()
@@ -67,6 +73,9 @@ fun MainScaffold(weather: Weather, navController: NavController) {
             title = "${weather.city.name}, ${weather.city.country}",
             icon = Icons.Default.ArrowBack,
             navController = navController,
+            onAddActionClicked = {
+                navController.navigate(WeatherScreens.SearchScreen.name)
+            },
             elevation = 5.dp
         ) {
             Logger.log(title = "Scaffold", message = "Button clicked")
