@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Container"
+    android:padding="@dimen/medium_padding"
+    tools:context="com.example.knowledge.compose.ComposeActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profile"
+        style="@style/NormalButton"
+        android:text="@string/title_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/jet_tip"
+        style="@style/NormalButton"
+        android:text="@string/title_jet_tip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/movie_app"
+        style="@style/NormalButton"
+        android:text="@string/title_movieapp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jet_tip" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/jet_note_app"
+        style="@style/NormalButton"
+        android:text="@string/title_jetnoteapp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_app" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/jet_trivia_app"
+        style="@style/NormalButton"
+        android:text="@string/title_jettrivia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jet_note_app" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/jet_weather_forecast_app"
+        style="@style/NormalButton"
+        android:text="@string/title_jetweatherforecast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jet_trivia_app" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

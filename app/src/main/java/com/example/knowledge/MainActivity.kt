@@ -3,13 +3,13 @@ package com.example.knowledge
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.composemodule.ComposeActivity
 import com.example.coroutines.CoroutinesActivity
 import com.example.coroutinescodelabmodule.main.CoroutinesCodelabActivity
 import com.example.errorhandlermodule.ErrorHandlingMainActivity
 import com.example.flowcodelabmodule.ui.FlowCodelabActivity
 import com.example.flowmodule.FlowActivity
 import com.example.graphqlmodule.GraphQLMainActivity
+import com.example.knowledge.compose.ComposeActivity
 import com.example.knowledge.databinding.ActivityMainBinding
 import com.example.navigationcomponentmodule.NavigationComponentMainActivity
 

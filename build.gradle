@@ -2,22 +2,22 @@
 buildscript {
     ext {
         // Core
-        core_ktx_version = '1.10.1'
-        appcompat_version = '1.6.1'
-        lifecycle_runtime_version = '2.6.1'
+        core_ktx_version = '1.13.1'
+        appcompat_version = '1.7.0'
+        lifecycle_runtime_version = '2.8.3'
         constraint_layout_version = '2.1.4'
-        navigation_version = '2.5.3'
+        navigation_version = '2.7.7'
         lifecycle_version = '2.6.1'
         androidx_test_version = '1.5.2'
 
         // Testing
         junit_version = '4.13.2'
-        junit_ext_version = '1.1.5'
+        junit_ext_version = '1.2.1'
         espresso_version = '3.5.1'
 
         // Material
-        material_version = '1.9.0'
-        material_icons_version = '1.4.3'
+        material_version = '1.12.0'
+        material_icons_version = '1.6.8'
 
         // Compose
         compose_version = '1.4.2'
@@ -33,7 +33,7 @@ buildscript {
         koil_version = '2.4.0'
 
         // Glide
-        glide_version = '4.13.0'
+        glide_version = '4.16.0'
 
         // Crypto
         crypto_version = '1.1.0-alpha06'
@@ -60,7 +60,7 @@ buildscript {
         lifecycle_viewmodel_version = '2.5.1'
 
         // Room
-        room_version = '2.5.2'
+        room_version = '2.6.1'
 
         // Work Manager
         work_manager_version = '2.8.1'
@@ -76,16 +76,24 @@ buildscript {
 
         // Truth
         truth_version = '1.1.3'
+
+        // Hilt
+        hilt_version = '2.51.1'
+        hilt_navigation_version = '1.2.0'
+    }
+
+    dependencies {
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
     }
 }
 
 plugins {
-    id 'com.android.application' version '8.0.0' apply false
-    id 'com.android.library' version '8.0.0' apply false
+    id 'com.android.application' version '8.3.0-rc02' apply false
+    id 'com.android.library' version '8.3.0-rc02' apply false
     id 'org.jetbrains.kotlin.android' version '1.8.10' apply false
     id 'androidx.navigation.safeargs.kotlin' version "$navigation_version" apply false
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
