@@ -17,8 +17,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.produceState
 import androidx.compose.ui.Alignment
@@ -71,7 +69,6 @@ fun MainScaffold(weather: Weather, navController: NavController) {
     Scaffold(topBar = {
         WeatherAppBar(
             title = "${weather.city.name}, ${weather.city.country}",
-            icon = Icons.Default.ArrowBack,
             navController = navController,
             onAddActionClicked = {
                 navController.navigate(WeatherScreens.SearchScreen.name)

@@ -41,22 +41,14 @@ class FavoritesViewModel @Inject constructor(private val repository: WeatherDbRe
     }
 
     fun insertFavorite(favorite: Favorite) =
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.insertFavorite(favorite)
-        }
+        viewModelScope.launch { repository.insertFavorite(favorite) }
 
     fun updateFavorite(favorite: Favorite) =
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.updateFavorite(favorite)
-        }
+        viewModelScope.launch { repository.updateFavorite(favorite) }
 
     fun deleteFavorite(favorite: Favorite) =
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteFavorite(favorite)
-        }
+        viewModelScope.launch { repository.deleteFavorite(favorite) }
 
     fun deleteAllFavorites() =
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteAllFavorites()
-        }
+        viewModelScope.launch { repository.deleteAllFavorites() }
 }
