@@ -47,4 +47,5 @@ dependencies {
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
     testImplementation "androidx.arch.core:core-testing:$core_testing_version"
     testImplementation "com.squareup.retrofit2:retrofit-mock:$retrofit_mock_version"
+    androidTestImplementation "androidx.test:rules:$androidx_test_version"
 }

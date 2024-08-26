@@ -52,4 +52,5 @@ dependencies {
     api "androidx.arch.core:core-testing:$core_testing_version"
     api "com.squareup.retrofit2:retrofit-mock:$retrofit_mock_version"
     implementation 'androidx.core:core-ktx:+'
+    androidTestImplementation "androidx.test:rules:$androidx_test_version"
 }

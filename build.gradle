@@ -8,7 +8,7 @@ buildscript {
         constraint_layout_version = '2.1.4'
         navigation_version = '2.7.7'
         lifecycle_version = '2.6.1'
-        androidx_test_version = '1.5.2'
+        androidx_test_version = '1.6.1'
 
         // Testing
         junit_version = '4.13.2'
@@ -80,6 +80,11 @@ buildscript {
         // Hilt
         hilt_version = '2.51.1'
         hilt_navigation_version = '1.2.0'
+    }
+
+    repositories {
+        google()
+        mavenCentral()
     }
 
     dependencies {

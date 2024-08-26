@@ -41,6 +41,7 @@ dependencies {
     implementation "com.apollographql.apollo3:apollo-runtime:$apollo_version"
     implementation "io.coil-kt:coil:$koil_version"
     implementation 'androidx.core:core-ktx:+'
+    androidTestImplementation "androidx.test:rules:1.6.1"
 }
 
 apollo {
