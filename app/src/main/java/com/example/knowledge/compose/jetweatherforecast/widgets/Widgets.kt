@@ -42,7 +42,7 @@ fun WeatherStateImage(imageUrl: String) {
 }
 
 @Composable
-fun HumidityWindPressureRow(weather: WeatherItem) {
+fun HumidityWindPressureRow(weather: WeatherItem, isImperial: Boolean) {
     Row(
         modifier = Modifier
             .padding(12.dp)
@@ -86,7 +86,7 @@ fun HumidityWindPressureRow(weather: WeatherItem) {
                 tint = AppColors.ColorSecondary
             )
             Text(
-                text = "${weather.humidity} mph",
+                text = "${formatDecimals(weather.speed)} " + if (isImperial) "mph" else "m/s",
                 style = MaterialTheme.typography.body2,
                 modifier = Modifier.padding(start = 8.dp)
             )
@@ -133,7 +133,8 @@ fun SunsetSunRiseRow(weather: WeatherItem) {
 
 @Composable
 fun WeatherDetailRow(weather: WeatherItem) {
-    val imageUrl = "${Constants.BASE_IMAGE_URL}${weather.weather[0].icon}${Constants.IMAGE_EXTENSION}"
+    val imageUrl =
+        "${Constants.BASE_IMAGE_URL}${weather.weather[0].icon}${Constants.IMAGE_EXTENSION}"
 
     Surface(
         modifier = Modifier

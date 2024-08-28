@@ -26,7 +26,7 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun provideAppDatabase(@ApplicationContext context: Context): WeatherDatabase =
+    fun provideWeatherDatabase(@ApplicationContext context: Context): WeatherDatabase =
         Room.databaseBuilder(
             context,
             WeatherDatabase::class.java,
