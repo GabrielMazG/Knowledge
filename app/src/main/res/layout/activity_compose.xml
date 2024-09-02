@@ -54,4 +54,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/jet_trivia_app" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/jet_reader_app"
+        style="@style/NormalButton"
+        android:text="@string/title_jetreader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jet_weather_forecast_app" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

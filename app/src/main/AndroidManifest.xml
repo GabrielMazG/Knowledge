@@ -110,6 +110,11 @@
             android:exported="false"
             android:label="@string/title_jetweatherforecast"
             android:theme="@style/Theme.Knowledge" />
+        <activity
+            android:name=".compose.jetreaderapp.screens.JetReaderActivity"
+            android:exported="false"
+            android:label="@string/title_jetreader"
+            android:theme="@style/Theme.Knowledge" />
     </application>
 
 </manifest>

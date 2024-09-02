@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "371230508786",
+    "project_id": "jetaread",
+    "storage_bucket": "jetaread.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371230508786:android:61f8c160ded535dbd3f26b",
+        "android_client_info": {
+          "package_name": "com.example.knowledge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEZPm8LokuU5E4Qk4i-N1ZciyhU9kGR6A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

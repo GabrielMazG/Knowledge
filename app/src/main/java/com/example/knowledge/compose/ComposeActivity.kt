@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.knowledge.compose.jetnoteapp.JetNoteActivity
+import com.example.knowledge.compose.jetreaderapp.screens.JetReaderActivity
 import com.example.knowledge.compose.jettip.JetTipActivity
 import com.example.knowledge.compose.jettriviaapp.screens.JetTriviaActivity
 import com.example.knowledge.compose.jetweatherforecast.screens.JetWeatherForecastActivity
@@ -39,6 +40,9 @@ class ComposeActivity : AppCompatActivity() {
             }
             jetWeatherForecastApp.setOnClickListener {
                 startActivity(Intent(this@ComposeActivity, JetWeatherForecastActivity::class.java))
+            }
+            jetReaderApp.setOnClickListener {
+                startActivity(Intent(this@ComposeActivity, JetReaderActivity::class.java))
             }
         }
     }

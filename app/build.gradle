@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
 }
 
 // Create a variable called keystorePropertiesFile, and initialize it to your
@@ -20,7 +21,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.knowledge"
-        minSdk 21
+        minSdk 23
         targetSdk 33
         multiDexEnabled true
         versionCode 1
@@ -108,6 +109,11 @@ dependencies {
     implementation "androidx.hilt:hilt-navigation-compose:$hilt_navigation_version"
 
     androidTestImplementation "androidx.test:rules:$androidx_test_version"
+
+    // Firebase
+    implementation(platform("com.google.firebase:firebase-bom:$firebase_version"))
+    implementation 'com.google.firebase:firebase-auth-ktx'
+    implementation 'com.google.firebase:firebase-firestore-ktx'
 }
 
 apply plugin: 'dagger.hilt.android.plugin'

@@ -11,6 +11,7 @@
     <string name="title_jetnoteapp">JetNote App</string>
     <string name="title_jettrivia">JetTrivia App</string>
     <string name="title_jetweatherforecast">Jet Weather Forecast App</string>
+    <string name="title_jetreader">Jet Reader App</string>
 
     <string name="title_activity_jet_tip">JetTipActivity</string>
 
