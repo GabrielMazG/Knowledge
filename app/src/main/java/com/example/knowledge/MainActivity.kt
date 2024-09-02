@@ -12,6 +12,7 @@ import com.example.graphqlmodule.GraphQLMainActivity
 import com.example.knowledge.compose.ComposeActivity
 import com.example.knowledge.databinding.ActivityMainBinding
 import com.example.navigationcomponentmodule.NavigationComponentMainActivity
+import com.google.firebase.FirebaseApp
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+        FirebaseApp.initializeApp(this)
 
         with(binding) {
             navigationComponents.setOnClickListener {

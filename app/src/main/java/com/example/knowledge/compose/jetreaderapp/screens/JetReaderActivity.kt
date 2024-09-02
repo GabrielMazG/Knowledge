@@ -15,8 +15,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.knowledge.compose.theme.ColorPrimaryDark
 import com.example.knowledge.compose.theme.KnowledgeTheme
-import com.google.firebase.Firebase
-import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
