@@ -25,7 +25,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.knowledge.R
 import com.example.knowledge.compose.jetweatherforecast.navigation.WeatherScreens
-import com.example.knowledge.compose.jetweatherforecast.utils.AppColors
+import com.example.knowledge.compose.theme.ColorAccent
+import com.example.knowledge.compose.theme.ColorSecondaryLight
+import com.example.knowledge.compose.theme.White
 import kotlinx.coroutines.delay
 
 @Composable
@@ -53,10 +55,10 @@ fun SplashScreen(navController: NavController) {
             .size(330.dp)
             .scale(scale.value),
         shape = CircleShape,
-        color = AppColors.White,
+        color = White,
         border = BorderStroke(
             width = 2.dp,
-            color = AppColors.ColorAccent
+            color = ColorAccent
         )
     ) {
         Column(
@@ -73,7 +75,7 @@ fun SplashScreen(navController: NavController) {
             Text(
                 text = "Text",
                 style = MaterialTheme.typography.h5,
-                color = AppColors.ColorSecondaryLight
+                color = ColorSecondaryLight
             )
         }
     }

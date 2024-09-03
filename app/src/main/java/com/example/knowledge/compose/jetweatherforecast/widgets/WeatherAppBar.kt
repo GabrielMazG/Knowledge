@@ -47,9 +47,9 @@ import androidx.navigation.NavController
 import com.example.knowledge.compose.jetweatherforecast.model.Favorite
 import com.example.knowledge.compose.jetweatherforecast.navigation.WeatherScreens
 import com.example.knowledge.compose.jetweatherforecast.screens.favorites.FavoritesViewModel
-import com.example.knowledge.compose.jetweatherforecast.utils.AppColors
-import com.example.knowledge.compose.jetweatherforecast.utils.AppColors.ColorAccent
+import com.example.knowledge.compose.theme.ColorAccent
 import com.example.knowledge.compose.theme.ColorSecondaryLight
+import com.example.knowledge.compose.theme.White
 
 @Preview
 @Composable
@@ -80,7 +80,7 @@ fun WeatherAppBar(
         title = {
             Text(
                 text = title,
-                color = AppColors.White,
+                color = White,
                 style = TextStyle(
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp
@@ -95,7 +95,7 @@ fun WeatherAppBar(
                     Icon(
                         imageVector = Icons.Default.Search,
                         contentDescription = "Search icon",
-                        tint = AppColors.White
+                        tint = White
                     )
                 }
                 IconButton(onClick = {
@@ -104,7 +104,7 @@ fun WeatherAppBar(
                     Icon(
                         imageVector = Icons.Rounded.MoreVert,
                         contentDescription = "More icon",
-                        tint = AppColors.White
+                        tint = White
                     )
                 }
             } else {
@@ -116,7 +116,7 @@ fun WeatherAppBar(
                 Icon(
                     imageVector = icon,
                     contentDescription = null,
-                    tint = AppColors.White,
+                    tint = White,
                     modifier = Modifier.clickable {
                         onButtonClicked.invoke()
                     }

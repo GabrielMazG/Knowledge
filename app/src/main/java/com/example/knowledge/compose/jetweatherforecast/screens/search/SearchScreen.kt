@@ -28,8 +28,8 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.knowledge.compose.Logger
 import com.example.knowledge.compose.jetweatherforecast.navigation.WeatherScreens
-import com.example.knowledge.compose.jetweatherforecast.utils.AppColors
 import com.example.knowledge.compose.jetweatherforecast.widgets.WeatherAppBar
+import com.example.knowledge.compose.theme.ColorSecondaryLight
 
 @Composable
 fun SearchScreen(navController: NavController) {
@@ -107,8 +107,8 @@ fun CommonTextField(
         ),
         keyboardActions = onAction,
         colors = TextFieldDefaults.outlinedTextFieldColors(
-            focusedBorderColor = AppColors.ColorSecondaryLight,
-            cursorColor = AppColors.ColorSecondaryLight
+            focusedBorderColor = ColorSecondaryLight,
+            cursorColor = ColorSecondaryLight
         ),
         shape = RoundedCornerShape(15.dp),
         modifier = Modifier

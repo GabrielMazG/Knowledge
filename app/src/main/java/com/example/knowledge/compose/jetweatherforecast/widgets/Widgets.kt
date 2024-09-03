@@ -26,11 +26,13 @@ import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import com.example.knowledge.R
 import com.example.knowledge.compose.jetweatherforecast.model.WeatherItem
-import com.example.knowledge.compose.jetweatherforecast.utils.AppColors
 import com.example.knowledge.compose.jetweatherforecast.utils.Constants
 import com.example.knowledge.compose.jetweatherforecast.utils.formatDate
 import com.example.knowledge.compose.jetweatherforecast.utils.formatDateTime
 import com.example.knowledge.compose.jetweatherforecast.utils.formatDecimals
+import com.example.knowledge.compose.theme.ColorAccent
+import com.example.knowledge.compose.theme.ColorPrimaryDark
+import com.example.knowledge.compose.theme.ColorSecondary
 
 @Composable
 fun WeatherStateImage(imageUrl: String) {
@@ -57,7 +59,7 @@ fun HumidityWindPressureRow(weather: WeatherItem, isImperial: Boolean) {
                 painter = painterResource(id = R.drawable.humidity),
                 contentDescription = "Humidity icon",
                 modifier = Modifier.size(20.dp),
-                tint = AppColors.ColorSecondary
+                tint = ColorSecondary
             )
             Text(
                 text = "${weather.humidity}%",
@@ -70,7 +72,7 @@ fun HumidityWindPressureRow(weather: WeatherItem, isImperial: Boolean) {
                 painter = painterResource(id = R.drawable.pressure),
                 contentDescription = "Pressure icon",
                 modifier = Modifier.size(20.dp),
-                tint = AppColors.ColorSecondary
+                tint = ColorSecondary
             )
             Text(
                 text = "${weather.humidity} psi",
@@ -83,7 +85,7 @@ fun HumidityWindPressureRow(weather: WeatherItem, isImperial: Boolean) {
                 painter = painterResource(id = R.drawable.wind),
                 contentDescription = "Wind icon",
                 modifier = Modifier.size(20.dp),
-                tint = AppColors.ColorSecondary
+                tint = ColorSecondary
             )
             Text(
                 text = "${formatDecimals(weather.speed)} " + if (isImperial) "mph" else "m/s",
@@ -107,7 +109,7 @@ fun SunsetSunRiseRow(weather: WeatherItem) {
                 painter = painterResource(id = R.drawable.sunrise),
                 contentDescription = "Sunrise",
                 modifier = Modifier.size(30.dp),
-                colorFilter = ColorFilter.tint(AppColors.ColorSecondary)
+                colorFilter = ColorFilter.tint(ColorSecondary)
             )
             Text(
                 text = formatDateTime(weather.sunrise),
@@ -125,7 +127,7 @@ fun SunsetSunRiseRow(weather: WeatherItem) {
                 painter = painterResource(id = R.drawable.sunset),
                 contentDescription = "Sunset",
                 modifier = Modifier.size(30.dp),
-                colorFilter = ColorFilter.tint(AppColors.ColorSecondary)
+                colorFilter = ColorFilter.tint(ColorSecondary)
             )
         }
     }
@@ -141,7 +143,7 @@ fun WeatherDetailRow(weather: WeatherItem) {
             .padding(3.dp)
             .fillMaxWidth(),
         shape = CircleShape.copy(topEnd = CornerSize(4.dp), bottomStart = CornerSize(4.dp)),
-        color = AppColors.ColorAccent
+        color = ColorAccent
     ) {
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -155,7 +157,7 @@ fun WeatherDetailRow(weather: WeatherItem) {
             Surface(
                 modifier = Modifier.padding(end = 2.dp),
                 shape = CircleShape.copy(topEnd = CornerSize(4.dp), bottomStart = CornerSize(4.dp)),
-                color = AppColors.ColorPrimaryDark
+                color = ColorPrimaryDark
             ) {
                 Text(
                     weather.weather[0].description,
@@ -166,7 +168,7 @@ fun WeatherDetailRow(weather: WeatherItem) {
             Surface(
                 modifier = Modifier.padding(end = 8.dp),
                 shape = CircleShape.copy(topEnd = CornerSize(4.dp), bottomStart = CornerSize(4.dp)),
-                color = AppColors.ColorPrimaryDark
+                color = ColorPrimaryDark
             ) {
                 Text(
                     modifier = Modifier.padding(horizontal = 8.dp, vertical = 2.dp),

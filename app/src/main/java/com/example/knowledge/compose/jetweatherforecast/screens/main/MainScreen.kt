@@ -36,10 +36,9 @@ import com.example.knowledge.compose.jetweatherforecast.data.DataOrException
 import com.example.knowledge.compose.jetweatherforecast.model.Weather
 import com.example.knowledge.compose.jetweatherforecast.navigation.WeatherScreens
 import com.example.knowledge.compose.jetweatherforecast.screens.settings.SettingsViewModel
-import com.example.knowledge.compose.jetweatherforecast.utils.AppColors.ColorAccent
-import com.example.knowledge.compose.jetweatherforecast.utils.AppColors.ColorPrimary
-import com.example.knowledge.compose.jetweatherforecast.utils.AppColors.ColorPrimaryDark
-import com.example.knowledge.compose.jetweatherforecast.utils.AppColors.WeatherBackground
+import com.example.knowledge.compose.theme.ColorAccent
+import com.example.knowledge.compose.theme.ColorPrimary
+import com.example.knowledge.compose.theme.ColorPrimaryDark
 import com.example.knowledge.compose.jetweatherforecast.utils.Constants.BASE_IMAGE_URL
 import com.example.knowledge.compose.jetweatherforecast.utils.Constants.IMAGE_EXTENSION
 import com.example.knowledge.compose.jetweatherforecast.utils.formatDate
@@ -132,7 +131,7 @@ fun MainContent(data: Weather, isImperial: Boolean) {
                 .padding(8.dp)
                 .size(250.dp),
             shape = CircleShape,
-            color = WeatherBackground
+            color = ColorSecondaryLight
         ) {
             Column(
                 verticalArrangement = Arrangement.Center,

@@ -46,7 +46,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.knowledge.compose.Logger
 import com.example.knowledge.compose.jettriviaapp.model.QuestionItem
-import com.example.knowledge.compose.jettriviaapp.util.AppColors
+import com.example.knowledge.compose.theme.ColorPrimary
+import com.example.knowledge.compose.theme.ColorSecondary
+import com.example.knowledge.compose.theme.ColorSecondaryLight
+import com.example.knowledge.compose.theme.Purple80
+import com.example.knowledge.compose.theme.Purple_200
+import com.example.knowledge.compose.theme.Purple_500
+import com.example.knowledge.compose.theme.Purple_700
+import com.example.knowledge.compose.theme.White
 
 @Composable
 fun Questions(viewModel: QuestionsViewModel) {
@@ -101,7 +108,7 @@ fun QuestionDisplay(
             .fillMaxWidth()
             .fillMaxHeight()
             .padding(4.dp),
-        color = AppColors.ColorPrimary
+        color = ColorPrimary
     ) {
         Column(
             modifier = Modifier.padding(12.dp),
@@ -120,7 +127,7 @@ fun QuestionDisplay(
                         .align(alignment = Alignment.Start)
                         .fillMaxHeight(0.3f),
                     fontSize = 17.sp,
-                    color = AppColors.ColorSecondaryLight,
+                    color = ColorSecondaryLight,
                     fontWeight = FontWeight.Bold,
                     lineHeight = 22.sp
                 )
@@ -136,8 +143,8 @@ fun QuestionDisplay(
                                 width = 2.dp,
                                 brush = Brush.linearGradient(
                                     colors = listOf(
-                                        AppColors.ColorSecondaryLight,
-                                        AppColors.ColorSecondaryLight
+                                        ColorSecondaryLight,
+                                        ColorSecondaryLight
                                     )
                                 ),
                                 shape = RoundedCornerShape(15.dp)
@@ -195,7 +202,7 @@ fun QuestionDisplay(
                         .align(alignment = Alignment.CenterHorizontally),
                     shape = RoundedCornerShape(34.dp),
                     colors = buttonColors(
-                        backgroundColor = AppColors.ColorSecondaryLight
+                        backgroundColor = ColorSecondaryLight
                     )
                 ) {
                     Text(
@@ -219,7 +226,7 @@ fun DrawDottedLine(pathEffect: PathEffect) {
             .height(2.dp)
     ) {
         drawLine(
-            color = AppColors.ColorPrimary, start = Offset(0f, 0f), end = Offset(size.width, 0f),
+            color = ColorPrimary, start = Offset(0f, 0f), end = Offset(size.width, 0f),
             pathEffect = pathEffect
         )
     }
@@ -233,7 +240,7 @@ fun QuestionTracker(counter: Int = 10, outOf: Int = 100) {
             withStyle(style = ParagraphStyle(textIndent = TextIndent.None)) {
                 withStyle(
                     style = SpanStyle(
-                        color = AppColors.ColorSecondary,
+                        color = ColorSecondary,
                         fontWeight = FontWeight.Bold,
                         fontSize = 27.sp
                     )
@@ -241,7 +248,7 @@ fun QuestionTracker(counter: Int = 10, outOf: Int = 100) {
                     append("Question $counter/")
                     withStyle(
                         style = SpanStyle(
-                            color = AppColors.ColorSecondary,
+                            color = ColorSecondary,
                             fontWeight = FontWeight.Light,
                             fontSize = 14.sp
                         )
@@ -276,10 +283,10 @@ fun ShowProgress(score: Int = 40, total: Int = 100) {
                 width = 4.dp,
                 brush = Brush.linearGradient(
                     colors = listOf(
-                        AppColors.Purple80,
-                        AppColors.Purple_200,
-                        AppColors.Purple_500,
-                        AppColors.Purple_700
+                        Purple80,
+                        Purple_200,
+                        Purple_500,
+                        Purple_700
                     )
                 ),
                 shape = RoundedCornerShape(34.dp)
@@ -314,7 +321,7 @@ fun ShowProgress(score: Int = 40, total: Int = 100) {
                 .fillMaxHeight()
                 .fillMaxWidth()
                 .padding(10.dp),
-            color = AppColors.White,
+            color = White,
             textAlign = TextAlign.Center
         )
     }

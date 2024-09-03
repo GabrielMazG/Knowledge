@@ -19,7 +19,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.knowledge.R
-import com.example.knowledge.compose.jetweatherforecast.utils.AppColors.ColorSecondary
+import com.example.knowledge.compose.theme.ColorSecondary
 import com.example.knowledge.compose.jetweatherforecast.widgets.WeatherAppBar
 
 @Composable
