@@ -22,11 +22,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.example.knowledge.compose.jetreaderapp.components.ReaderLogo
 import com.example.knowledge.compose.jetreaderapp.navigation.ReaderScreens
+import com.example.knowledge.compose.theme.ColorAccent
 import com.example.knowledge.compose.theme.ColorSecondary
 import com.example.knowledge.compose.theme.ColorSecondaryLight
-import com.example.knowledge.compose.theme.PurpleGrey40
-import com.example.knowledge.compose.theme.Purple_500
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.delay
 
 @Composable
@@ -46,7 +47,10 @@ fun ReaderSplashScreen(navController: NavController) {
             )
         )
         delay(2000L)
-        navController.navigate(ReaderScreens.LoginScreen.name)
+        if (FirebaseAuth.getInstance().currentUser?.email.isNullOrBlank())
+            navController.navigate(ReaderScreens.LoginScreen.name)
+        else
+            navController.navigate(ReaderScreens.HomeScreen.name)
     }
 
     Surface(
@@ -55,7 +59,7 @@ fun ReaderSplashScreen(navController: NavController) {
             .size(330.dp)
             .scale(scale.value),
         shape = CircleShape,
-        color = ColorSecondaryLight,
+        color = ColorAccent,
         border = BorderStroke(width = 2.dp, color = ColorSecondary)
     ) {
         Column(
@@ -68,18 +72,8 @@ fun ReaderSplashScreen(navController: NavController) {
             Text(
                 text = "\"Read . Change. Yourself\"",
                 style = MaterialTheme.typography.h5,
-                color = PurpleGrey40
+                color = ColorSecondaryLight
             )
         }
     }
-}
-
-@Composable
-private fun ReaderLogo(modifier: Modifier = Modifier) {
-    Text(
-        text = "A. Reader",
-        modifier = modifier.padding(bottom = 16.dp),
-        style = MaterialTheme.typography.h3,
-        color = Purple_500.copy(alpha = 0.5f)
-    )
 }

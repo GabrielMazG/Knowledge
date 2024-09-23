@@ -59,4 +59,7 @@
     </string>
     <string name="about_app">Weather App v0.1</string>
     <string name="api_used"><![CDATA[https://api.openweathermap.org/data/2.5/forecast/daily?q=Malaga&appid=ed60fcfbd110ee65c7150605ea8aceea&units=metric]]></string>
+
+    <!--  Reader App  -->
+    <string name="create_account">Pelase enter a valid email and password that is at least 6 characters</string>
 </resources>
