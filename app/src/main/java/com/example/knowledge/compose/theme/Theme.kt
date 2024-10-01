@@ -5,7 +5,6 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import com.example.knowledge.compose.theme.Typography
 
 private val DarkColorPalette = darkColors(
     primary = ColorPrimary,
@@ -17,7 +16,7 @@ private val DarkColorPalette = darkColors(
 private val LightColorPalette = lightColors(
     primary = ColorSecondary,
     secondary = ColorSecondaryLight,
-    surface = ColorAccent,
+    surface = ColorPrimaryDark,
     background = ColorPrimaryDark
 
 

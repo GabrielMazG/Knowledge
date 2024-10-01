@@ -12,7 +12,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -31,6 +30,7 @@ import com.example.knowledge.compose.jetweatherforecast.model.Favorite
 import com.example.knowledge.compose.jetweatherforecast.navigation.WeatherScreens
 import com.example.knowledge.compose.jetweatherforecast.widgets.WeatherAppBar
 import com.example.knowledge.compose.theme.ColorAccent
+import com.example.knowledge.compose.theme.Typography
 
 @Composable
 fun FavoritesScreen(
@@ -104,7 +104,7 @@ fun CityRow(
                 Text(
                     text = favorite.country,
                     modifier = Modifier.padding(4.dp),
-                    style = MaterialTheme.typography.caption
+                    style = Typography.caption
                 )
             }
             Icon(

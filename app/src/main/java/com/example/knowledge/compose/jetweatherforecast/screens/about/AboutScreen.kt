@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -19,8 +18,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.knowledge.R
-import com.example.knowledge.compose.theme.ColorSecondary
 import com.example.knowledge.compose.jetweatherforecast.widgets.WeatherAppBar
+import com.example.knowledge.compose.theme.ColorSecondary
+import com.example.knowledge.compose.theme.Typography
 
 @Composable
 fun AboutScreen(navController: NavController) {
@@ -47,13 +47,13 @@ fun AboutScreen(navController: NavController) {
             ) {
                 Text(
                     text = stringResource(id = R.string.about_app),
-                    style = MaterialTheme.typography.h5,
+                    style = Typography.h5,
                     fontWeight = FontWeight.Bold,
                     color = ColorSecondary
                 )
                 Text(
                     text = stringResource(id = R.string.api_used),
-                    style = MaterialTheme.typography.subtitle1,
+                    style = Typography.subtitle1,
                     fontWeight = FontWeight.Light,
                     color = ColorSecondary
                 )

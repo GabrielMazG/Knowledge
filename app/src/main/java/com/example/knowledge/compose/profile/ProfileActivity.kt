@@ -42,12 +42,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.knowledge.R
 import com.example.knowledge.compose.theme.ColorPrimary
 import com.example.knowledge.compose.theme.ColorPrimaryDark
 import com.example.knowledge.compose.theme.ColorSecondary
 import com.example.knowledge.compose.theme.ColorSecondaryLight
 import com.example.knowledge.compose.theme.KnowledgeTheme
-import com.example.knowledge.R
+import com.example.knowledge.compose.theme.Typography
 
 class ProfileActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -102,7 +103,7 @@ fun CreateBizCard() {
                     }) {
                     Text(
                         text = "Portfolio",
-                        style = MaterialTheme.typography.button,
+                        style = Typography.button,
                         color = ColorPrimary
                     )
                 }
@@ -178,10 +179,9 @@ fun Portfolio(data: List<String>) {
                         )
                         Text(
                             text = "A great project",
-                            style = MaterialTheme.typography.body2,
+                            style = Typography.body2,
                             color = ColorSecondaryLight
                         )
-
                     }
                 }
             }
@@ -194,13 +194,13 @@ private fun CreateInfo() {
     Column(modifier = Modifier.padding(5.dp)) {
         Text(
             text = "Miles P.",
-            style = MaterialTheme.typography.h4,
+            style = Typography.h4,
             color = ColorSecondary
         )
         Text(
             text = "Android Compose Programmer",
             modifier = Modifier.padding(3.dp),
-            style = MaterialTheme.typography.subtitle1,
+            style = Typography.subtitle1,
             color = ColorSecondaryLight
         )
         Text(

@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.material.Icon
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -33,6 +32,7 @@ import com.example.knowledge.compose.jetweatherforecast.utils.formatDecimals
 import com.example.knowledge.compose.theme.ColorAccent
 import com.example.knowledge.compose.theme.ColorPrimaryDark
 import com.example.knowledge.compose.theme.ColorSecondary
+import com.example.knowledge.compose.theme.Typography
 
 @Composable
 fun WeatherStateImage(imageUrl: String) {
@@ -63,7 +63,7 @@ fun HumidityWindPressureRow(weather: WeatherItem, isImperial: Boolean) {
             )
             Text(
                 text = "${weather.humidity}%",
-                style = MaterialTheme.typography.body2,
+                style = Typography.body2,
                 modifier = Modifier.padding(start = 8.dp)
             )
         }
@@ -76,7 +76,7 @@ fun HumidityWindPressureRow(weather: WeatherItem, isImperial: Boolean) {
             )
             Text(
                 text = "${weather.humidity} psi",
-                style = MaterialTheme.typography.body2,
+                style = Typography.body2,
                 modifier = Modifier.padding(start = 8.dp)
             )
         }
@@ -89,7 +89,7 @@ fun HumidityWindPressureRow(weather: WeatherItem, isImperial: Boolean) {
             )
             Text(
                 text = "${formatDecimals(weather.speed)} " + if (isImperial) "mph" else "m/s",
-                style = MaterialTheme.typography.body2,
+                style = Typography.body2,
                 modifier = Modifier.padding(start = 8.dp)
             )
         }
@@ -113,14 +113,14 @@ fun SunsetSunRiseRow(weather: WeatherItem) {
             )
             Text(
                 text = formatDateTime(weather.sunrise),
-                style = MaterialTheme.typography.caption,
+                style = Typography.caption,
                 modifier = Modifier.padding(start = 6.dp)
             )
         }
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(
                 text = formatDateTime(weather.sunset),
-                style = MaterialTheme.typography.caption,
+                style = Typography.caption,
                 modifier = Modifier.padding(end = 6.dp)
             )
             Image(
@@ -162,7 +162,7 @@ fun WeatherDetailRow(weather: WeatherItem) {
                 Text(
                     weather.weather[0].description,
                     modifier = Modifier.padding(8.dp),
-                    style = MaterialTheme.typography.caption
+                    style = Typography.caption
                 )
             }
             Surface(
@@ -175,7 +175,7 @@ fun WeatherDetailRow(weather: WeatherItem) {
                     text = buildAnnotatedString {
                         withStyle(
                             style = SpanStyle(
-                                fontSize = MaterialTheme.typography.caption.fontSize,
+                                fontSize = Typography.caption.fontSize,
                                 color = Color.Red.copy(alpha = 0.7f),
                                 fontWeight = FontWeight.SemiBold
                             )
@@ -184,7 +184,7 @@ fun WeatherDetailRow(weather: WeatherItem) {
                         }
                         withStyle(
                             style = SpanStyle(
-                                fontSize = MaterialTheme.typography.caption.fontSize,
+                                fontSize = Typography.caption.fontSize,
                                 color = Color.Cyan.copy(alpha = 0.7f),
                                 fontWeight = FontWeight.SemiBold
                             )

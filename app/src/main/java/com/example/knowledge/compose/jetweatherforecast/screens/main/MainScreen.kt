@@ -13,7 +13,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.CircularProgressIndicator
 import androidx.compose.material.Divider
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -36,9 +35,6 @@ import com.example.knowledge.compose.jetweatherforecast.data.DataOrException
 import com.example.knowledge.compose.jetweatherforecast.model.Weather
 import com.example.knowledge.compose.jetweatherforecast.navigation.WeatherScreens
 import com.example.knowledge.compose.jetweatherforecast.screens.settings.SettingsViewModel
-import com.example.knowledge.compose.theme.ColorAccent
-import com.example.knowledge.compose.theme.ColorPrimary
-import com.example.knowledge.compose.theme.ColorPrimaryDark
 import com.example.knowledge.compose.jetweatherforecast.utils.Constants.BASE_IMAGE_URL
 import com.example.knowledge.compose.jetweatherforecast.utils.Constants.IMAGE_EXTENSION
 import com.example.knowledge.compose.jetweatherforecast.utils.formatDate
@@ -48,7 +44,11 @@ import com.example.knowledge.compose.jetweatherforecast.widgets.SunsetSunRiseRow
 import com.example.knowledge.compose.jetweatherforecast.widgets.WeatherAppBar
 import com.example.knowledge.compose.jetweatherforecast.widgets.WeatherDetailRow
 import com.example.knowledge.compose.jetweatherforecast.widgets.WeatherStateImage
+import com.example.knowledge.compose.theme.ColorAccent
+import com.example.knowledge.compose.theme.ColorPrimary
+import com.example.knowledge.compose.theme.ColorPrimaryDark
 import com.example.knowledge.compose.theme.ColorSecondaryLight
+import com.example.knowledge.compose.theme.Typography
 
 @Composable
 fun MainScreen(
@@ -103,6 +103,7 @@ fun MainScaffold(weather: Weather, navController: NavController, isImperial: Boo
     }
 
     ) {
+        it
         MainContent(data = weather, isImperial = isImperial)
     }
 }
@@ -121,7 +122,7 @@ fun MainContent(data: Weather, isImperial: Boolean) {
     ) {
         Text(
             text = formatDate(weatherItem.dt), // Wed, Nov 30
-            style = MaterialTheme.typography.body1,
+            style = Typography.body1,
             color = ColorSecondaryLight,
             fontWeight = FontWeight.SemiBold,
             modifier = Modifier.padding(10.dp)
@@ -140,13 +141,13 @@ fun MainContent(data: Weather, isImperial: Boolean) {
                 WeatherStateImage(imageUrl = imageUrl)
                 Text(
                     text = "${formatDecimals(weatherItem.temp.day)}º",
-                    style = MaterialTheme.typography.h3,
+                    style = Typography.h3,
                     fontWeight = FontWeight.ExtraBold,
                     color = ColorPrimaryDark
                 )
                 Text(
                     text = weatherItem.weather[0].main,
-                    style = MaterialTheme.typography.h6,
+                    style = Typography.h6,
                     fontStyle = FontStyle.Italic,
                     color = ColorAccent
                 )
@@ -159,7 +160,7 @@ fun MainContent(data: Weather, isImperial: Boolean) {
         SunsetSunRiseRow(weather = data.list[0])
         Text(
             text = "This week",
-            style = MaterialTheme.typography.h6,
+            style = Typography.h6,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(bottom = 8.dp)
         )

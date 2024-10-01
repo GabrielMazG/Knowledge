@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -27,6 +26,7 @@ import com.example.knowledge.R
 import com.example.knowledge.compose.jetweatherforecast.navigation.WeatherScreens
 import com.example.knowledge.compose.theme.ColorAccent
 import com.example.knowledge.compose.theme.ColorSecondaryLight
+import com.example.knowledge.compose.theme.Typography
 import com.example.knowledge.compose.theme.White
 import kotlinx.coroutines.delay
 
@@ -74,7 +74,7 @@ fun SplashScreen(navController: NavController) {
             )
             Text(
                 text = "Text",
-                style = MaterialTheme.typography.h5,
+                style = Typography.h5,
                 color = ColorSecondaryLight
             )
         }
