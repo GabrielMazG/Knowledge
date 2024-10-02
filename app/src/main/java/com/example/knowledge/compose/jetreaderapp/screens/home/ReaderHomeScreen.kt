@@ -173,7 +173,7 @@ fun RoundedButton(
                 .width(90.dp)
                 .heightIn(40.dp)
                 .clickable {
-
+                    onPress()
                 },
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
