@@ -36,11 +36,11 @@ import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import com.example.knowledge.compose.Logger
 import com.example.knowledge.compose.jetreaderapp.components.ReaderAppBar
+import com.example.knowledge.compose.jetreaderapp.components.RoundedButton
 import com.example.knowledge.compose.jetreaderapp.data.Resource
 import com.example.knowledge.compose.jetreaderapp.model.Item
 import com.example.knowledge.compose.jetreaderapp.model.MBook
 import com.example.knowledge.compose.jetreaderapp.navigation.ReaderScreens
-import com.example.knowledge.compose.jetreaderapp.screens.home.RoundedButton
 import com.example.knowledge.compose.theme.ColorSecondaryLight
 import com.example.knowledge.compose.theme.Typography
 import com.google.firebase.auth.FirebaseAuth
@@ -152,15 +152,16 @@ fun ShowBookDetails(bookInfo: Resource<Item>, navController: NavController) {
         Text(
             text = "Categories:",
             color = ColorSecondaryLight,
-            textDecoration = TextDecoration.Underline,
-            maxLines = 3
+            textDecoration = TextDecoration.Underline
         )
         Text(
             text = bookData?.categories.toString(),
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(bottom = 6.dp, start = 6.dp),
-            textAlign = TextAlign.Start
+            textAlign = TextAlign.Start,
+            maxLines = 3,
+            overflow = TextOverflow.Ellipsis
         )
     }
     Row(modifier = Modifier.fillMaxWidth()) {

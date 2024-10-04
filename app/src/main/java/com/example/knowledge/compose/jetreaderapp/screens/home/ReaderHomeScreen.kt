@@ -30,6 +30,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.knowledge.compose.jetreaderapp.components.FABContent
 import com.example.knowledge.compose.jetreaderapp.components.ListCard
@@ -44,7 +45,7 @@ import com.example.knowledge.compose.theme.Typography
 import com.google.firebase.auth.FirebaseAuth
 
 @Composable
-fun HomeScreen(navController: NavController) {
+fun HomeScreen(navController: NavController, viewModel: ReaderHomeViewModel = hiltViewModel()) {
     Scaffold(
         topBar = {
             ReaderAppBar(title = "A.Reader", navController = navController)
@@ -56,19 +57,22 @@ fun HomeScreen(navController: NavController) {
         }) {
         it
         Surface(modifier = Modifier.fillMaxSize()) {
-            HomeContent(navController)
+            HomeContent(navController, viewModel)
         }
     }
 }
 
 @Composable
-fun HomeContent(navController: NavController) {
-    val listOfBooks = listOf(
-        MBook(id = "123", title = "Running", authors = "Me and you", notes = "Hello Wolrd1"),
-        MBook(id = "123", title = "Running", authors = "Me and you", notes = "Hello Wolrd2"),
-        MBook(id = "123", title = "Running", authors = "Me and you", notes = "Hello Wolrd3"),
-        MBook(id = "123", title = "Running", authors = "Me and you", notes = "Hello Wolrd4"),
-    )
+fun HomeContent(navController: NavController, viewModel: ReaderHomeViewModel) {
+    var listOfBooks = emptyList<MBook>()
+    val currentUser = FirebaseAuth.getInstance().currentUser
+
+    if (!viewModel.data.value.data.isNullOrEmpty()) {
+        listOfBooks = viewModel.data.value.data!!.toList().filter { book ->
+            book.userId == currentUser?.uid.toString()
+        }
+    }
+
     val currentUserName =
         if (!FirebaseAuth.getInstance().currentUser?.email.isNullOrEmpty())
             FirebaseAuth.getInstance().currentUser?.email?.split("@")?.get(0).toString()
@@ -116,7 +120,7 @@ fun HomeContent(navController: NavController) {
                 )
             }
         }
-        ReadingRightNowArea(books = listOf(), navController = navController)
+        ReadingRightNowArea(books = listOfBooks, navController = navController)
         TitleSection(label = "Reading List")
         BookListArea(listOfBooks = listOfBooks, navController = navController)
     }
@@ -125,12 +129,12 @@ fun HomeContent(navController: NavController) {
 @Composable
 fun BookListArea(listOfBooks: List<MBook>, navController: NavController) {
     HorizontalScrollableComponent(listOfBooks) {
-        // Todo: on card clicked navigate to details
+        navController.navigate(ReaderScreens.UpdateScreen.name + "/$it")
     }
 }
 
 @Composable
-fun HorizontalScrollableComponent(listOfBooks: List<MBook>, onCardPress: (String) -> Unit) {
+fun HorizontalScrollableComponent(listOfBooks: List<MBook>, onCardPressed: (String) -> Unit) {
     val scrollState = rememberScrollState()
 
     Row(
@@ -141,7 +145,7 @@ fun HorizontalScrollableComponent(listOfBooks: List<MBook>, onCardPress: (String
     ) {
         for (book in listOfBooks) {
             ListCard(book) {
-                onCardPress(it)
+                onCardPressed(book.googleBookId.toString())
             }
         }
     }
@@ -149,42 +153,8 @@ fun HorizontalScrollableComponent(listOfBooks: List<MBook>, onCardPress: (String
 
 @Composable
 fun ReadingRightNowArea(books: List<MBook>, navController: NavController) {
-    ListCard()
-}
-
-@Preview
-@Composable
-fun RoundedButton(
-    label: String = "Reading",
-    radius: Int = 29,
-    onPress: () -> Unit = {}
-) {
-    Surface(
-        modifier = Modifier.clip(
-            RoundedCornerShape(
-                bottomEndPercent = radius,
-                topStartPercent = radius
-            )
-        ),
-        color = ColorAccent
-    ) {
-        Column(
-            modifier = Modifier
-                .width(90.dp)
-                .heightIn(40.dp)
-                .clickable {
-                    onPress()
-                },
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(
-                text = label,
-                style = TextStyle(
-                    color = ColorSecondary,
-                    fontSize = 15.sp
-                )
-            )
-        }
-    }
+    if (books.isNotEmpty())
+        ListCard(book = books[0])
+    else
+        ListCard()
 }

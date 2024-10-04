@@ -1,5 +1,11 @@
 package com.example.knowledge.compose.jetreaderapp.components
 
+import android.content.Context
+import android.view.MotionEvent
+import android.widget.Toast
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -10,6 +16,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -29,17 +36,25 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Logout
 import androidx.compose.material.icons.filled.StarBorder
+import androidx.compose.material.icons.filled.StarRate
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material.icons.rounded.FavoriteBorder
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
@@ -57,7 +72,7 @@ import androidx.navigation.NavController
 import coil.compose.rememberImagePainter
 import com.example.knowledge.compose.jetreaderapp.model.MBook
 import com.example.knowledge.compose.jetreaderapp.navigation.ReaderScreens
-import com.example.knowledge.compose.jetreaderapp.screens.home.RoundedButton
+import com.example.knowledge.compose.theme.ColorAccent
 import com.example.knowledge.compose.theme.ColorPrimary
 import com.example.knowledge.compose.theme.ColorPrimaryDark
 import com.example.knowledge.compose.theme.ColorSecondary
@@ -327,7 +342,7 @@ fun ListCard(
         id = "123",
         title = "Running",
         authors = "Me and you",
-        notes = "Hello Wolrd"
+        notes = "Hello World"
     ), onPressDetails: (String) -> Unit = {}
 ) {
     val context = LocalContext.current
@@ -354,7 +369,7 @@ fun ListCard(
         ) {
             Row(horizontalArrangement = Arrangement.Center) {
                 Image(
-                    painter = rememberImagePainter(data = "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=80&q=80"),
+                    painter = rememberImagePainter(data = book.photoUrl.toString()),
                     contentDescription = "Book Image",
                     modifier = Modifier
                         .height(140.dp)
@@ -371,7 +386,7 @@ fun ListCard(
                         contentDescription = "Fav Icon",
                         modifier = Modifier.padding(bottom = 1.dp)
                     )
-                    BookRating(score = 3.5)
+                    BookRating(score = book.rating ?: 0.0)
                 }
             }
             Text(
@@ -394,7 +409,99 @@ fun ListCard(
             verticalAlignment = Alignment.Bottom
         ) {
             RoundedButton(label = "Reading", radius = 70)
+        }
+    }
+}
 
+@ExperimentalComposeUiApi
+@Composable
+fun RatingBar(
+    modifier: Modifier = Modifier,
+    rating: Int,
+    onPressRating: (Int) -> Unit
+) {
+    var ratingState by remember {
+        mutableIntStateOf(rating)
+    }
+
+    var selected by remember {
+        mutableStateOf(false)
+    }
+    val size by animateDpAsState(
+        targetValue = if (selected) 42.dp else 34.dp,
+        spring(Spring.DampingRatioMediumBouncy)
+    )
+
+    Row(
+        modifier = Modifier.width(280.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
+    ) {
+        for (i in 1..5) {
+            Icon(
+                imageVector = Icons.Filled.StarRate,
+                contentDescription = "star",
+                modifier = modifier
+                    .width(size)
+                    .height(size)
+                    .pointerInteropFilter {
+                        when (it.action) {
+                            MotionEvent.ACTION_DOWN -> {
+                                selected = true
+                                onPressRating(i)
+                                ratingState = i
+                            }
+
+                            MotionEvent.ACTION_UP -> {
+                                selected = false
+                            }
+                        }
+                        true
+                    },
+                tint = if (i <= ratingState) ColorSecondary else ColorSecondaryLight
+            )
+        }
+    }
+}
+
+fun showToast(context: Context, msg: String) {
+    Toast.makeText(context, msg, Toast.LENGTH_LONG)
+        .show()
+}
+
+@Preview
+@Composable
+fun RoundedButton(
+    label: String = "Reading",
+    radius: Int = 29,
+    onPress: () -> Unit = {}
+) {
+    Surface(
+        modifier = Modifier.clip(
+            RoundedCornerShape(
+                bottomEndPercent = radius,
+                topStartPercent = radius
+            )
+        ),
+        color = ColorAccent
+    ) {
+        Column(
+            modifier = Modifier
+                .width(90.dp)
+                .heightIn(40.dp)
+                .clickable {
+                    onPress()
+                },
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = label,
+                style = TextStyle(
+                    color = ColorSecondary,
+                    fontSize = 15.sp
+                )
+            )
         }
     }
 }

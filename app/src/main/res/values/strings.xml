@@ -61,5 +61,7 @@
     <string name="api_used"><![CDATA[https://api.openweathermap.org/data/2.5/forecast/daily?q=Malaga&appid=ed60fcfbd110ee65c7150605ea8aceea&units=metric]]></string>
 
     <!--  Reader App  -->
-    <string name="create_account">Pelase enter a valid email and password that is at least 6 characters</string>
+    <string name="create_account">Please enter a valid email and password that is at least 6 characters</string>
+    <string name="delete_confirmation">Are you sure you want to delete this book?</string>
+    <string name="delete_confirmation_action">This action is not reversible</string>
 </resources>
