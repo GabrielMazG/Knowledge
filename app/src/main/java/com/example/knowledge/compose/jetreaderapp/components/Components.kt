@@ -350,6 +350,7 @@ fun ListCard(
     val displayMetrics = resources.displayMetrics
     val screenWith = displayMetrics.widthPixels / displayMetrics.density
     val spacing = 10.dp
+    val isStartedReading = remember { mutableStateOf(false) }
 
     Card(shape = RoundedCornerShape(29.dp),
         elevation = 6.dp,
@@ -408,7 +409,11 @@ fun ListCard(
             horizontalArrangement = Arrangement.End,
             verticalAlignment = Alignment.Bottom
         ) {
-            RoundedButton(label = "Reading", radius = 70)
+            isStartedReading.value = book.startedReading != null
+            RoundedButton(
+                label = if (isStartedReading.value) "Reading" else "Not Yet",
+                radius = 70
+            )
         }
     }
 }
@@ -429,7 +434,8 @@ fun RatingBar(
     }
     val size by animateDpAsState(
         targetValue = if (selected) 42.dp else 34.dp,
-        spring(Spring.DampingRatioMediumBouncy)
+        spring(Spring.DampingRatioMediumBouncy),
+        label = ""
     )
 
     Row(

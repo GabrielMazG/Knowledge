@@ -26,8 +26,7 @@ class ReaderHomeViewModel @Inject constructor(private val repository: FireReposi
         viewModelScope.launch {
             data.value.loading = true
             data.value = repository.getAllBooksFromDatabase()
-            if (!data.value.data.isNullOrEmpty()) data.value.loading = false
+            if (data.value.data != null) data.value.loading = false
         }
-
     }
 }

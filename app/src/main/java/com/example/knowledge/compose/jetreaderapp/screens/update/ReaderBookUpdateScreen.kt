@@ -50,12 +50,12 @@ import com.example.knowledge.R
 import com.example.knowledge.compose.jetreaderapp.components.InputField
 import com.example.knowledge.compose.jetreaderapp.components.RatingBar
 import com.example.knowledge.compose.jetreaderapp.components.ReaderAppBar
+import com.example.knowledge.compose.jetreaderapp.components.RoundedButton
 import com.example.knowledge.compose.jetreaderapp.components.showToast
 import com.example.knowledge.compose.jetreaderapp.data.DataOrException
 import com.example.knowledge.compose.jetreaderapp.model.MBook
 import com.example.knowledge.compose.jetreaderapp.navigation.ReaderScreens
 import com.example.knowledge.compose.jetreaderapp.screens.home.ReaderHomeViewModel
-import com.example.knowledge.compose.jetreaderapp.screens.home.RoundedButton
 import com.example.knowledge.compose.jetreaderapp.utils.formatDate
 import com.example.knowledge.compose.theme.ColorAccent
 import com.example.knowledge.compose.theme.ColorSecondary
@@ -128,12 +128,18 @@ fun BookUpdateScreen(
 @Composable
 fun ShowSimpleForm(book: MBook, navController: NavHostController) {
     val context = LocalContext.current
-    val notesText =
-        remember { mutableStateOf(book.notes.toString().ifEmpty { "No thoughts available." }) }
-    val isStartedReading = remember { mutableStateOf(book.startedReading.toString().isNotEmpty()) }
-    val isFinishedReading =
-        remember { mutableStateOf(book.finishedReading.toString().isNotEmpty()) }
-    val ratingVal = remember { mutableIntStateOf(book.rating?.toInt() ?: 0) }
+    val notesText = remember {
+        mutableStateOf(book.notes.toString().ifEmpty { "No thoughts available." })
+    }
+    val isStartedReading = remember {
+        mutableStateOf(false)
+    }
+    val isFinishedReading = remember {
+        mutableStateOf(false)
+    }
+    val ratingVal = remember {
+        mutableIntStateOf(book.rating?.toInt() ?: 0)
+    }
 
     SimpleForm(textFieldValue = notesText) { note ->
         notesText.value = note
@@ -147,15 +153,17 @@ fun ShowSimpleForm(book: MBook, navController: NavHostController) {
             onClick = { isStartedReading.value = true }, enabled = book.startedReading == null
         ) {
             if (book.startedReading == null) {
-                if (!isStartedReading.value) Text(
-                    text = "Start Reading", color = ColorSecondary
-                )
-                else Text(
-                    text = "Started Reading!",
-                    modifier = Modifier.alpha(0.9f),
-                    color = ColorSecondary.copy(alpha = 0.9f)
-                )
-
+                if (!isStartedReading.value)
+                    Text(
+                        text = "Start Reading",
+                        color = ColorSecondary
+                    )
+                else
+                    Text(
+                        text = "Started Reading!",
+                        modifier = Modifier.alpha(0.9f),
+                        color = ColorSecondary.copy(alpha = 0.9f)
+                    )
             } else {
                 Text(
                     text = "Started on: ${formatDate(book.startedReading!!)}",
@@ -205,11 +213,15 @@ fun ShowSimpleForm(book: MBook, navController: NavHostController) {
         val bookUpdate =
             changedNotes || changedRating || isStartedReading.value || isFinishedReading.value
 
+        println("+++++ changedNotes: $changedNotes")
+        println("+++++ changedRating: $changedRating")
+        println("+++++ isStartedReading: ${isStartedReading.value}")
+        println("+++++ isFinishedReading: ${isFinishedReading.value}")
         RoundedButton(label = "Update") {
             if (bookUpdate) {
                 val bookToUpdate = hashMapOf(
-                    "finished_reading_at" to isFinishedTimeStamp,
                     "started_reading_at" to isStartedTimeStamp,
+                    "finished_reading_at" to isFinishedTimeStamp,
                     "rating" to ratingVal.intValue,
                     "notes" to notesText.value
                 ).toMap()
@@ -250,7 +262,6 @@ fun ShowSimpleForm(book: MBook, navController: NavHostController) {
 @Composable
 fun SimpleForm(
     modifier: Modifier = Modifier,
-    loading: Boolean = false,
     textFieldValue: MutableState<String>,
     onSearch: (String) -> Unit
 ) {
